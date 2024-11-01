@@ -53,10 +53,8 @@ class Client:
     def ouvrir_compte(self,type_compte):
         self.type_compte = type_compte
         for type_compte in self.comptes:
-            numero_compte = input("enter numero de compte")
-            Solde = input("enter numero de compte")
             if type_compte == "checking":
-                self.comptes.append(CheckingAccount(numero_compte,Solde))
+                self.comptes.append(CheckingAccount(numero_compte, Solde))
             elif type_compte == "savings":
                 self.comptes.append(SavingsAccount(Numero_compte,Solde))
             else:
@@ -72,7 +70,7 @@ class Client:
             print("type de compte non valide")
 
     def afficher_comptes(self):
-        print(self.comptes)
+            print(self.comptes)
 
 
 
@@ -96,6 +94,8 @@ savingsAccount.afficher_solde()
 
 
 client = Client(12,"ossama")
-type_compte = input("enter type de compte a ouvrir")
+numero_compte = input("enter numero de compte")
+Solde = input("enter numero de compte")
+type_compte = input("enter type de compte a ouvrir: ")
 client.ouvrir_compte(type_compte)
 client.afficher_comptes()

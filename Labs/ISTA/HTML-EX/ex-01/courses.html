@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <style>
+        *,
+        *::before,
+        *::after{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        html{
+            scroll-behavior: smooth;
+        }
+        body{
+            background-image: url(/Labs/ISTA/HTML-EX/ex-01/img/bg_2.jpg.webp);
+            background-size: 100% 100%;
+            background-attachment: fixed;
+            color: #ffffff;
+        }
+        li{
+            list-style: none;
+        }
+        a{
+            margin: 0;
+            padding: 0;
+            color: #ffffff;
+            text-decoration: none;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .nav-list a:hover{
+            color: #1eb2a6;
+            transition: all ease .3s;
+        }
+        .navbar{
+            width: 100%;
+            height: 60px;
+            margin: auto;
+            background: rgba(255, 255, 255, 0.1);
+            position: fixed;
+            top: 0;
+            display: flex;
+        }
+        .nav-logo{
+            margin-left: 18px;
+            display: flex;
+            flex-direction: column;
+        }
+        .nav-logo-title{
+            font-size: 30px;
+            font-weight: 800;
+        }
+        .nav-logo-title:hover{
+            color: #1eb2a6;
+            transition: all ease-in .2s;
+        }
+        .nav-logo span{
+            font-size: 12px;
+        }
+        .nav-list{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-around;
+        }
+        .nav-list li{
+            margin-left: 190px;
+        }
+        .nav-list li a{
+            font-size: 18px; 
+            font-weight: 500;
+        }
+        .nav-list li .active{
+            color: #1eb2a6;
+        }
+
+
+        .container{
+            width: 100%;
+            position: relative;
+            margin-top: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .content{
+            width: 600px;
+            height: 500px;
+        }
+        .content-desc{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .content-desc h3{
+            display: flex;
+            flex-direction: row;
+            font-size: 16px;
+            font-weight: 600;
+        }
+        .content-desc h1{
+            font-size: 70px;
+            margin-top: 20px;
+            margin-bottom: 15px;
+        }
+        .content-desc .home-link{
+            margin-right: 5px;
+        }
+        .content-desc .home-link:hover{
+            color: #1eb2a6;
+            transition: all ease .3s;
+        }
+
+
+
+        .courses-container{
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+            background-color: #f8f8f8;
+        }
+        .courses-content{
+            width: 80%;
+            height: 100vh;
+            margin: auto;
+            margin-top: 150px;
+            background-color: antiquewhite;
+        }
+        .course-cards{
+            width: 90%;
+            height: 100%;
+            margin: auto;
+            background-color: darkgray;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        .course-card{
+            width: 33%;
+            height: 300px;
+            background-color: chocolate;
+        }
+        .card-desc{
+            width: 90%;
+            height: 100%;
+            margin: auto;
+            background-color: #1eb2a6;
+        }
+        .card-title{
+            width: 100%;
+            background-color: crimson;
+            display: flex;
+            flex-direction: row;
+            margin-bottom: 30px;
+        }
+        .card-title img{
+            width: 60px;
+            height: 60px;
+            background-color: #1eb2a6;
+            border-radius: 50%;
+            margin-right: 20px;
+        }
+        .title-desc h2{
+            font-size: 26px;
+            font-family: 600;
+            line-height: 1.4;
+            margin-bottom: 10px;
+        }
+        .title-desc .teacher{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+        .title-desc .teacher img{
+            width: 30px;
+            height: 30px;
+        }
+        .card-desc .montant{
+            display: block;
+            text-align: center;
+            color: #1eb2a6;
+            background-color: violet;
+            padding: 10px 0;
+            margin-bottom: 20px;
+        }
+        .card-link{
+            width: 100%;
+            height: 50px;
+            background-color: tomato;
+            display: block;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <main>
+            <header>
+                <nav class="navbar">
+                    <div class="nav-logo">
+                        <a href="#" class="nav-logo-title">
+                            Academia 
+                        </a>
+                        <span>Online Education & Learning</span>
+                        
+                       
+                    </div>
+                    <ul class="nav-list">
+                        <li><a href="/Labs/ISTA/HTML-EX/ex-01/index.html">Home</a></li>
+                        <li><a href="/Labs/ISTA/HTML-EX/ex-01/contact.html">contact</a></li>
+                        <li><a class="active" href="/Labs/ISTA/HTML-EX/ex-01/co.html">All Courses</a></li>
+                        <li><a href="/Labs/ISTA/HTML-EX/ex-01/agences.html">agence</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <section class="container">
+                <div class="content">
+                    <div class="content-desc">
+                        <h3>
+                            <a class="home-link" href="/Labs/ISTA/HTML-EX/ex-01/index.html">Home ></a>
+                            <p>Courses ></p>
+                        </h3>
+                        <h1>Explore Courses</h1>
+                    </div>
+                </div>
+            </section>
+        <section class="courses-container">
+            <div class="courses-content">
+                <div class="course-cards">
+                    <div class="course-card">
+                        <div class="card-desc">
+                            <div class="card-title">
+                                <img src="/Labs/ISTA/HTML-EX/ex-01/img/code-alt-regular-24.png" alt="">
+                                <div class="title-desc">
+                                    <h2>Basic Fundamentals for Software Engineering</h2>
+                                    <div class="teacher">
+                                        <img src="/Labs/ISTA/HTML-EX/ex-01/img/author-1.jpg.webp" alt="">
+                                        <p>by Argaz_Dev</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="montant">
+                                <p>$100 All Course / $15 per month</p>
+                            </div>
+                            <div class="card-link">
+                                <a href="#">Entroll Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

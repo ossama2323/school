@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    
+    <style>
+        *,
+        *::before,
+        *::after{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        html{
+            scroll-behavior: smooth;
+        }
+        body{
+            background-image: url(/Labs/ISTA/HTML-EX/ex-01/img/bg_2.jpg.webp);
+            background-attachment: fixed;
+            background-size: 100% 100%;
+            color: #ffffffff;
+            font-size: 14px;
+        }
+        li{
+            list-style: none;
+        }
+        a{
+            color: #ffffffff;
+            text-decoration: none;
+        }
+        .navbar{
+            width: 100%;
+            height: 60px;
+            margin: auto;
+            background: rgba(255, 255, 255, 0.1);
+            position: fixed;
+            top: 0;
+            display: flex;
+            z-index: 2;
+        }
+        .nav-logo{
+            margin-left: 18px;
+            display: flex;
+            flex-direction: column;
+        }
+        .nav-logo-title{
+            font-size: 30px;
+            font-weight: 800;
+
+        }
+        .nav-logo-title:hover{
+            color: #1eb2a6;
+        }
+        .nav-logo span{
+            font-size: 12px;
+        }
+        .nav-list{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-around;
+        }
+        .nav-list a:hover{
+            color: #1eb2a6;
+            transition: all .3s;
+        }
+        .nav-list li{
+            margin-left: 190px;
+        }
+        .nav-list li a{
+            font-size: 18px; 
+
+        }
+        .nav-list li .active{
+            color: #1eb2a6;
+        }
+
+        .container{
+            width: 100%;
+            position: relative;
+            margin-top: 50px;
+        }
+        .content{
+            margin: auto;
+            margin-top: 180px; 
+            padding-top: 55px;
+        }
+        .content-des{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .content-des h3 .home-link:hover{
+            color: #1eb2a6;
+        }
+        .content-des h1{
+            font-size: 70px;
+            margin-top: 20px;
+            margin-bottom: 15px;
+        }
+        .content-des a{
+            font-size: 16px;
+            font-weight: 600;
+        }
+        .content-des .scroll{
+            background-color: #ffffff;
+            border: 1px solid #1eb2a6;
+            border-radius: 50%;
+            padding-top: 2px;
+            color: #1eb2a6;
+        }
+        .contact{
+            width: 100%;
+            margin-top: 36vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .contact-content{
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: #ffffff;
+            border-radius: 3px;
+        }
+        .contact h3{
+            color: black;
+            font-size: 30px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        .contact p{
+            color: #999999;
+            font-size: 16px;
+        }
+        .open-hours{
+            margin-bottom: 15px;
+        }
+        .contact-desc{
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+        }
+        .contact-desc div{
+            width: 33%;
+            padding: 0 20px;
+        }
+        .contact-desc div span{
+            color: black;
+            display: block;
+            margin-bottom: 8px;
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+        .contact-desc a{
+            color: black;
+            transition: all ease .5s;
+        }
+        .contact-desc a:hover{
+            color: #1eb2a6;
+        }
+        .contact-form{
+            width: 100%;
+            margin-top: 30px;
+        }
+        .all-inputs{
+            display: flex;
+            flex-direction: column;
+        }
+        .all-inputs input{
+            padding-left: 5px;
+            margin-bottom: 10px;
+            height: 45px;
+        }
+        .all-inputs textarea{
+            padding: 10px 0 0 10px;
+        }
+        .n-p-input{
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        .n-p-input input{
+            width: 48%;
+        }
+        .btn-contact{
+            width: 17%;
+            height: 35px;
+            margin-top: 10px;
+            background-color: #1eb2a6;
+            color: #ffffff;
+            border: 1px solid #1eb2a6;
+            border-radius: 3px;
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <header>
+            <nav class="navbar">
+                <div class="nav-logo">
+                    <a href="#" class="nav-logo-title">
+                        Academia 
+                    </a>
+                    <span>Online Education & Learning</span>
+                   
+                </div>
+                <ul class="nav-list">
+                    <li><a href="/Labs/ISTA/HTML-EX/ex-01/index.html">Home</a></li>
+                    <li><a class="active" href="/Labs/ISTA/HTML-EX/ex-01/contact.html">contact</a></li>
+                    <li><a href="/Labs/ISTA/HTML-EX/ex-01/courses.html">All Courses</a></li>
+                    <li><a href="/Labs/ISTA/HTML-EX/ex-01/agences.html">agence</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section class="container">
+            <div class="content">
+                <div class="content-des">
+                    <h3>
+                        <a class="home-link" href="/Labs/ISTA/HTML-EX/ex-01/index.html">Home ></a>
+                        <span>Contact > </span>
+                    </h3>
+                    <h1>Contact Us</h1>
+                    <a class="scroll" href="#contact-us"><box-icon type='solid' name='down-arrow-alt'></box-icon></a>
+                </div>
+            </div>
+        </section>
+        <section class="contact">
+            <div class="contact-content">
+                <h3>Contact us</h3>
+                <p class="open-hours">We're open for any suggestion or just to have a chat</p>
+                <div class="contact-desc">
+                    <div>
+                        <p>
+                            <span>Address:</span>
+                            Boujarrah Hay Gharrabou N18 Tetouan
+                        </p>
+                    </div>
+                    <div>
+                        <p>
+                            <span>Email:</span>
+                            <a href="mailto:ossamaargaz@gmail.com">ossamaargaz@gmail.com</a>
+                        </p>
+                    </div>
+                    <div>
+                        <p>
+                            <span>Phone:</span>
+                            <a href="tel:0681872061">0681872061</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contact-us" action="">
+                        <div class="all-inputs">
+                            <div class="n-p-input">
+                                <input type="text" placeholder="Name">
+                                <input type="text" placeholder="Email">
+                            </div>
+                            <input type="text" placeholder="Subject">
+                            <textarea rows="8"  placeholder="Creat a message here"></textarea>
+                            <button class="btn-contact" type="submit">Send Message</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+
+</body>
+</html>

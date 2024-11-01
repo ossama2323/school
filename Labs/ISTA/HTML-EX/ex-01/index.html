@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <style>
+        *,
+        *::before,
+        *::after{
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        li{
+            list-style: none;
+        }
+        button{
+            cursor: pointer;
+            border: none;
+        }
+        a{
+            margin: 0;
+            padding: 0;
+            color: #ffffff;
+            text-decoration: none;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .nav-list a:hover{
+            color: #1eb2a6;
+            transition: all .3s;
+        }
+        body{
+            background-image: url('/Labs/ISTA/HTML-EX/ex-01/img/bg_1.jpg.webp');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+            color: #ffffff;
+        }
+        .navbar{
+            width: 100%;
+            height: 60px;
+            margin: auto;
+            background: rgba(255, 255, 255, 0.1);
+            position: fixed;
+            top: 0;
+            display: flex;
+        }
+        .nav-logo{
+            margin-left: 18px;
+            display: flex;
+            flex-direction: column;
+        }
+        .nav-logo-title{
+            font-size: 30px;
+            font-weight: 800;
+        }
+        .nav-logo-title:hover{
+            color: #1eb2a6;
+        }
+        .nav-logo span{
+            font-size: 12px;
+        }
+        .nav-list{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-around;
+        }
+        .nav-list li{
+            margin-left: 190px;
+        }
+        .nav-list li a{
+            font-size: 18px; 
+            font-weight: 500;
+        }
+        .nav-list li .active{
+            color: #1eb2a6;
+        }
+
+
+
+        .container{
+            width: 100%;
+           margin-top: 50px;
+        }
+        .content{
+            width: 450px;
+            display: flex;
+            flex-direction: column;
+            padding-top: 180px;
+            margin-left: 100px;
+            font-size: 14px;
+        }
+        .content p{
+            text-transform: uppercase;
+            font-weight: 700;
+            letter-spacing: 2px;
+            color: #ffffffb3;
+            margin: 15px 0 15px 0;
+        }
+        .content h1{
+            font-weight: 600;
+            font-size: 40px;
+            line-height: 1.2;
+        }
+        .content .btn{
+            width: 200px;
+            height: 52px;
+            border-radius: 5px;
+        }
+        .content .btn-2 a{
+            color: #1eb2a6;
+        }
+        .content .btn-1{
+            background-color: #1eb2a6;
+        }
+        .content .btn-2{
+            background-color: #ffffff;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-logo">
+                <a href="#" class="nav-logo-title">
+                    Academia 
+                </a>
+                <span>Online Education & Learning</span>
+               
+            </div>
+            <ul class="nav-list">
+                <li><a class="active" href="/Labs/ISTA/HTML-EX/ex-01/index.html">Home</a></li>
+                <li><a href="/Labs/ISTA/HTML-EX/ex-01/contact.html">contact</a></li>
+                <li><a href="/Labs/ISTA/HTML-EX/ex-01/courses.html">All Courses</a></li>
+                <li><a href="/Labs/ISTA/HTML-EX/ex-01/agences.html">agence</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="container">
+        <div class="content">
+            <p>Welcome to Academia</p>
+            <h1>Best Online Education Expertise</h1>
+            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+            <div>
+                <button class="btn btn-1"><a href="">get started Now</a></button>
+                <button class="btn btn-2"><a href="/Labs/ISTA/HTML-EX/ex-01/courses.html">view course</a></button>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

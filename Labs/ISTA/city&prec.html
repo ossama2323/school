@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .parent{
+            width: 100%;
+            height: 100%;
+            background-color: burlywood;
+            display: flex;
+            justify-content: space-between;
+        }
+        .list_prec{
+            width: 25%;
+            height: 300px;
+            background-color: darkcyan;
+            padding: 20px;
+        }
+        .list_city{
+            width: 25%;
+            height: 300px;
+            background-color: darkcyan;
+            padding: 20px;
+
+        }
+        .resulta{
+            width: 25%;
+            height: 300px;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+
+        <div class="list_prec">
+            <input type="number" id="prec">
+            <ul id="list_prec">
+
+            </ul>
+            <button type="button" onclick="add_prec()">cliquer ici</button>
+        </div>
+
+
+        <div class="list_city">
+            <input type="text" id="city">
+            <ul id="list_city">
+
+            </ul>
+            <button type="button" onclick="add_city()">cliquer ici</button>
+        </div>
+
+        <div class="resulta">
+            <h1>
+                cliquer ici pour ajouter les deux : <button type="button"onclick="add_res()">cliquer ici</button>
+            </h1>
+            <ul id="res_somme">
+
+            </ul>
+        </div>
+    </div>
+
+
+
+    <script>
+
+
+    function add_prec(){
+        for(i=0;i<1;i++){
+        var res_prec = '<li id="prec_1">' + document.getElementById('prec').value + '</li>';
+
+        document.getElementById('list_prec').innerHTML +=  res_prec;
+        }
+    }
+    function add_city(){
+        for(i=0;i<1;i++){
+        var res_city = '<li id="city_1">' + document.getElementById('city').value + '</li>';
+        document.getElementById('list_city').innerHTML +=  res_city;
+        }
+    }
+    function add_res(){
+        for(i=0;i<1;i++){
+            var res = '<li>' + document.getElementById('list_city').innerText + document.getElementById('list_prec').innerText + '</li>';
+            document.getElementById('res_somme').innerHTML +=  res;
+
+        }
+
+    }
+
+
+    </script>
+</body>
+</html>

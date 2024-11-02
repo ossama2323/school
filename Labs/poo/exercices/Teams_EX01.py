@@ -9,18 +9,13 @@ class Livre:
         print(f"Titre:{self.titre}\nAuteur:{self.auteur}\nISBN:{self.isbn}\nnombre d'exemplaires:{self.nbrExemplaire}")
 
 
-livre1 = Livre("harry poter", "ossama", "123", 1)
-print("----------------------------------- livre ------------------------------------")
-print(Livre.afficher_details(livre1))
-
-
-class membre(Livre):
+class Membre(Livre):
     id = 1
     def __init__(self, nom, livres_empruntes =[]):
         self.nom = nom
         self.member_id = id
         self.livres_empruntes = livres_empruntes
-        membre.id+=1
+        Membre.id+=1
     def emprunter_livre(self,livre):
         if livre not in self.livres_empruntes:
             self.livres_empruntes.append(livre)
@@ -74,10 +69,11 @@ def menu():
     print("5 - Enregistrer un emprunt")
     print("6 - Enregistrer un retour")
     print("0 - Quitter")
-
+if __name__ == '__main__':
     biblio = bibliotheque()
     choice = 5
     while choice != 0:
+        menu()
         if choice == 1:
             if len(biblio.membres) > 0:
                 print("-------------------- Livres ------------------")
@@ -97,6 +93,69 @@ def menu():
                 print("Livre ajouté avec succès.")
             except:
                 print("Saisie incorrecte")
+        elif choice == 3:
+            try:
+                nom = input("Saisir le nom:")
+                membre = Membre(nom)
+                biblio.enregistrer_membre(membre)
+                print("membre ajouté avec succes")
+            except:
+                print("Saisie incorrecte")
+        elif choice == 4 :
+            for membre in biblio.membres:
+                print(f"{biblio.membres.index(membre)} {membre.nom}")
+            membreSelection = input("saisir le numero de membre pour afficher leur liste des empruntes: ")
+            if biblio.membres[membreSelection] is not None:
+                biblio.membres[membreSelection].afficher_listes_empruntes()
+        elif choice == 5:
+            for membre in biblio.membres:
+                print(f"{biblio.membres.index(membre)} {membre.nom}")
+
+            membreSelection = None
+            while membreSelection is None:
+                NumMembre = int(input("saisir le numero de membre : "))
+                membreSelection = biblio.membres[NumMembre]
+            
+            for livre in biblio.membres:
+                nbrEmprunt = 0
+                for m in biblio.membres:
+                    for l in m.liste_empruntes:
+                        if l == livre:
+                            nbrEmprunt += 1
+                if nbrEmprunt < livre.nbrExemplaire:
+                    print(f"{biblio.membres.index(livre)} {livre.titre}")
+
+            livreSelection = 0
+            while livreSelection is None:
+                numlivre = input("saisir le numero de livre pour emprunter: ")
+                livreSelection = biblio.membres[numlivre]
+            biblio.emprenter_livre(membreSelection, livreSelection)
+
+        elif choice == 6:
+            print("---------------------------- Membres ----------------------------")
+            for membre in biblio.membres:
+                print(f"{biblio.membres.index(membre)} {membre.nom}")
+
+            membreSelectionne = None
+            while membreSelectionne is None:
+                numMembre = int(input("Saisir le numéro du membre:"))
+                membreSelectionne = biblio.membres[numMembre]
+
+            print("---------------------------- Livres ----------------------------")
+            for livre in membreSelectionne.livres_empruntes:
+                print(f"{membreSelectionne.livres_empruntes.index(livre)} {livre.titre}")
+
+            livreSelectionne = None
+            while livreSelectionne is None:
+                numLivre = int(input("Saisir le numéro du livre:"))
+                livreSelectionne = membreSelectionne.livres_empruntes[numLivre]
+
+            biblio.retourner_livre(membreSelectionne, livreSelectionne)
+
+                
+
+
+
 
                 
 

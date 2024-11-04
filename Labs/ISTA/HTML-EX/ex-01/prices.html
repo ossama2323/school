@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing</title>
+    <link rel="stylesheet" href="/Labs/ISTA/HTML-EX/icofont/icofont/icofont.min.css">
+
+    <style>
+        *,
+        *::before,
+        *::after{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        html{
+            scroll-behavior: smooth;
+        }
+        body{
+            background-image: url(/Labs/ISTA/HTML-EX/ex-01/img/bg_2.jpg.webp);
+            background-size: 100% 100%;
+            background-attachment: fixed;
+            color: #ffffff;
+        }
+        li{
+            list-style: none;
+        }
+        a{
+            margin: 0;
+            padding: 0;
+            color: #ffffff;
+            text-decoration: none;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .nav-list a:hover{
+            color: #1eb2a6;
+            transition: all ease .3s;
+        }
+        .navbar{
+            width: 100%;
+            height: 60px;
+            margin: auto;
+            background: rgba(255, 255, 255, 0.1);
+            position: fixed;
+            top: 0;
+            display: flex;
+            z-index: 2;
+        }
+        .navbar-scroll{
+            background: rgba(0, 0, 0, 0.539);
+            transition: all ease .3s;
+        }
+        .nav-logo{
+            margin-left: 18px;
+            display: flex;
+            flex-direction: column;
+        }
+        .nav-logo-title{
+            font-size: 30px;
+            font-weight: 800;
+        }
+        .nav-logo-title:hover{
+            color: #1eb2a6;
+            transition: all ease-in .2s;
+        }
+        .nav-logo span{
+            font-size: 12px;
+        }
+        .nav-list{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-around;
+        }
+        .nav-list li{
+            margin-left: 190px;
+        }
+        .nav-list li a{
+            font-size: 18px; 
+            font-weight: 500;
+        }
+        .nav-list li .active{
+            color: #1eb2a6;
+        }
+
+
+
+        .container{
+            width: 100%;
+            position: relative;
+            margin-top: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .content{
+            width: 750px;
+            height: 500px;
+        }
+        .content-desc{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .content-desc h3{
+            display: flex;
+            flex-direction: row;
+            font-size: 16px;
+            font-weight: 600;
+        }
+        .content-desc h1{
+            font-size: 70px;
+            margin-top: 20px;
+            margin-bottom: 15px;
+            font-weight: 400;
+        }
+        .content-desc .home-link{
+            margin-right: 5px;
+        }
+        .content-desc .home-link:hover{
+            color: #1eb2a6;
+            transition: all ease .3s;
+        }
+        .content-desc .scroll{
+            border: 1px solid #1eb2a6;
+            border-radius: 50%;
+            padding-top: 2px;
+            color: #1eb2a6;
+            transition: all ease .3s;
+        }
+        .content-desc .scroll:hover{
+            color: #ffffff;
+            background-color: #1eb2a6;
+        }
+        .contact-desc .scroll i{
+            color: #1eb2a6;
+        }
+
+
+        .prices-container{
+            width: 100%;
+            background-color: #f8f8f8;
+            overflow: hidden;
+        }
+        .prices-content{
+            width: 90%;
+            height: 100%;
+            margin: auto;
+            margin-top: 150px;
+            margin-bottom: 150px;
+        }
+        .prices-cards{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        .prices-card{
+            width: 24%;
+            background-color: #ffffff;
+            box-shadow: -5px 5px 20px rgba(0, 0, 0, 0.071);
+        }
+        .card-desc{
+            text-align: center;
+            padding: 40px 30px;
+        }
+        .card-desc h4{
+            color: #111111;
+            letter-spacing: 1px;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+        }
+        .card-desc span{
+            font-size: 50px;
+            font-weight: 600;
+            color: #1eb2a6;
+        }
+        .card-desc .span-doll{
+            font-size: 30px;
+            color: #999999;
+        }
+        .card-desc p{
+            margin-top: 30px;
+            margin-bottom: 50px;
+            color: #999999;
+            line-height: 1.6;
+        }
+        .card-desc .card-link{
+            padding: 20px 25px;
+            text-transform: uppercase;
+            color: #1eb2a6;
+            border: 1px solid #1eb2a6;
+            border-radius: 2px;
+            font-weight: 600;
+            font-size: 14px;
+        }
+        .card-desc .card-link:hover{
+            background-color: #1eb2a6;
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <header>
+            <nav class="navbar" id="navbar">
+                <div class="nav-logo">
+                    <a href="#" class="nav-logo-title">
+                        Academia 
+                    </a>
+                    <span>Online Education & Learning</span>
+                </div>
+                <ul class="nav-list">
+                    <li><a href="/Labs/ISTA/HTML-EX/ex-01/index.html">Home</a></li>
+                    <li><a href="/Labs/ISTA/HTML-EX/ex-01/contact.html">contact</a></li>
+                    <li><a href="/Labs/ISTA/HTML-EX/ex-01/courses.html">All Courses</a></li>
+                    <li><a class="active" href="/Labs/ISTA/HTML-EX/ex-01/prices.html">prices</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section class="container">
+            <div class="content">
+                <div class="content-desc">
+                    <h3>
+                        <a class="home-link" href="/Labs/ISTA//HTML-EX/ex-01/index.html">Home ></a>
+                        <p>Pricing ></p>
+                    </h3>
+                    <h1>Choose The Right Plan</h1>
+                    <a class="scroll" href="#prices"><i class="icofont-3x">&#xea92;</i></a>
+                </div>
+            </div>
+        </section>
+        <section class="prices-container" id="prices">
+            <div class="prices-content">
+                <div class="prices-cards">
+                    <div class="prices-card">
+                        <div class="card-desc">
+                            <h4>Basic Plan</h4>
+                            <span class="span-all"><span class="span-doll">$</span> 49K</span>
+                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                            <a class="card-link" href="#">Get Started</a>
+                        </div>
+                    </div>
+                    <div class="prices-card">
+                        <div class="card-desc">
+                            <h4>Beginner Plan</h4>
+                            <span class="span-all"><span class="span-doll">$</span> 79K</span>
+                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                            <a class="card-link" href="#">Get Started</a>
+                        </div>
+                    </div>
+                    <div class="prices-card">
+                        <div class="card-desc">
+                            <h4>Premium  Plan</h4>
+                            <span class="span-all"><span class="span-doll">$</span> 109K</span>
+                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                            <a class="card-link" href="#">Get Started</a>
+                        </div>
+                    </div>
+                    <div class="prices-card">
+                        <div class="card-desc">
+                            <h4>ultimate Plan</h4>
+                            <span class="span-all"><span class="span-doll">$</span> 149K</span>
+                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                            <a class="card-link" href="#">Get Started</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <script>
+        window.onscroll = function(){
+    if(window.scrollY > document.getElementById('prices').offsetTop - 10){
+        document.getElementById('navbar').classList.add('navbar-scroll');
+    }
+    else{
+        document.getElementById('navbar').classList.remove('navbar-scroll');
+    }
+}
+    </script>
+</body>
+</html>

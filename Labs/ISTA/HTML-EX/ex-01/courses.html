@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Courses</title>
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="/Labs/ISTA/HTML-EX/icofont/icofont/icofont.min.css">
 
     <style>
         *,
@@ -46,6 +46,10 @@
             position: fixed;
             top: 0;
             display: flex;
+        }
+        .navbar-scroll{
+            background: rgba(0, 0, 0, 0.539);
+            transition: all ease .3s;
         }
         .nav-logo{
             margin-left: 18px;
@@ -119,54 +123,67 @@
             color: #1eb2a6;
             transition: all ease .3s;
         }
+        .content-desc .scroll{
+            border: 1px solid #1eb2a6;
+            border-radius: 50%;
+            padding-top: 2px;
+            color: #1eb2a6;
+            transition: all ease .3s;
+        }
+        .content-desc .scroll:hover{
+            color: #ffffff;
+            background-color: #1eb2a6;
+        }
+        .contact-desc .scroll i{
+            color: #1eb2a6;
+        }
 
 
 
         .courses-container{
             width: 100%;
-            height: 100vh;
             overflow: hidden;
             background-color: #f8f8f8;
         }
         .courses-content{
-            width: 80%;
-            height: 100vh;
+            width: 95%;
             margin: auto;
             margin-top: 150px;
-            background-color: antiquewhite;
         }
         .course-cards{
-            width: 90%;
+            width: 85%;
             height: 100%;
             margin: auto;
-            background-color: darkgray;
             display: flex;
             flex-wrap: wrap;
             flex-direction: row;
-            justify-content: space-between;
         }
         .course-card{
-            width: 33%;
-            height: 300px;
-            background-color: chocolate;
+            width: 32%;
+            height: 400px;
+            padding-top: 20px;
+            margin-right: 13px;
+            color: #000;
+            background-color: #ffffff;
+            margin-top: 20px;
         }
         .card-desc{
             width: 90%;
             height: 100%;
             margin: auto;
-            background-color: #1eb2a6;
         }
         .card-title{
             width: 100%;
-            background-color: crimson;
             display: flex;
             flex-direction: row;
             margin-bottom: 30px;
         }
-        .card-title img{
+        .card-title .enginer{
             width: 60px;
             height: 60px;
+            padding: 5px;
             background-color: #1eb2a6;
+            color: #ffffff;
             border-radius: 50%;
             margin-right: 20px;
         }
@@ -176,6 +193,14 @@
             line-height: 1.4;
             margin-bottom: 10px;
         }
+        .title-desc .stars{
+            width: 15px;
+            height: 10px;
+            display: flex;
+            flex-direction: row;
+            margin-bottom: 15px;
+            color: #1eb2a6;
+        }
         .title-desc .teacher{
             display: flex;
             flex-direction: row;
@@ -184,30 +209,47 @@
         .title-desc .teacher img{
             width: 30px;
             height: 30px;
+            border-radius: 50%;
+        }
+        .title-desc .teacher p{
+            font-size: 16px;
+            font-weight: 600;
+            color: #999999;
+            padding-left: 15px;
         }
         .card-desc .montant{
             display: block;
             text-align: center;
             color: #1eb2a6;
-            background-color: violet;
+            background-color: #f8f8f8;
             padding: 10px 0;
             margin-bottom: 20px;
         }
-        .card-link{
+        .card-link a{
             width: 100%;
-            height: 50px;
-            background-color: tomato;
+            padding: 15px;
+            font-size: 16px;
+            font-weight: 600;
+            background-color: #f8f8f8;
+            color: #1eb2a6;
             display: block;
             justify-content: center;
             align-items: center;
             text-align: center;
+            border: 1px solid #1eb2a6;
+            border-radius: 4px;
+        }
+        .card-link a:hover{
+            color: #ffffff;
+            background-color: #1eb2a6;
+            transition: all ease .2s;
         }
     </style>
 </head>
 <body>
     <main>
             <header>
-                <nav class="navbar">
+                <nav class="navbar" id="navbar">
                     <div class="nav-logo">
                         <a href="#" class="nav-logo-title">
                             Academia 
@@ -219,8 +261,8 @@
                     <ul class="nav-list">
                         <li><a href="/Labs/ISTA/HTML-EX/ex-01/index.html">Home</a></li>
                         <li><a href="/Labs/ISTA/HTML-EX/ex-01/contact.html">contact</a></li>
-                        <li><a class="active" href="/Labs/ISTA/HTML-EX/ex-01/co.html">All Courses</a></li>
-                        <li><a href="/Labs/ISTA/HTML-EX/ex-01/agences.html">agence</a></li>
+                        <li><a class="active" href="/Labs/ISTA/HTML-EX/ex-01/courses.html">All Courses</a></li>
+                        <li><a href="/Labs/ISTA/HTML-EX/ex-01/prices.html">prices</a></li>
                     </ul>
                 </nav>
             </header>
@@ -232,18 +274,223 @@
                             <p>Courses ></p>
                         </h3>
                         <h1>Explore Courses</h1>
+                        <a class="scroll" href="#courses"><i class="icofont-3x">&#xea92;</i></a>
                     </div>
                 </div>
             </section>
-        <section class="courses-container">
+        <section class="courses-container" id="courses">
             <div class="courses-content">
                 <div class="course-cards">
                     <div class="course-card">
                         <div class="card-desc">
                             <div class="card-title">
-                                <img src="/Labs/ISTA/HTML-EX/ex-01/img/code-alt-regular-24.png" alt="">
-                                <div class="title-desc">
+                                <i class="enginer icofont-3x">&#xe999;</i>
+                            <div class="title-desc">
                                     <h2>Basic Fundamentals for Software Engineering</h2>
+                                    <div class="stars">
+                                        <i class="icofont-0x">&#xf000;</i>
+                                        <i class="icofont-0x">&#xf000;</i>
+                                        <i class="icofont-0x">&#xf000;</i>
+                                        <i class="icofont-0x">&#xf000;</i>
+                                        <i class="icofont-0x">&#xf000;</i>
+                                        <p>(5.0)</p>
+                                    </div>
+                                    <div class="teacher">
+                                        <img src="/Labs/ISTA/HTML-EX/ex-01/img/author-1.jpg.webp" alt="">
+                                        <p>by Argaz_Dev</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="montant">
+                                <p>$100 All Course / $15 per month</p>
+                            </div>
+                            <div class="card-link">
+                                <a href="#">Entroll Now</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="course-card">
+                        <div class="card-desc">
+                            <div class="card-title">
+                                <i class="enginer icofont-3x">&#xe999;</i>
+                            <div class="title-desc">
+                                    <h2>Basic Fundamentals for Software Engineering</h2>
+                                    <div class="stars">
+                                        <i class="icofont-0x">&#xf000;</i>
+                                        <i class="icofont-0x">&#xf000;</i>
+                                        <i class="icofont-0x">&#xf000;</i>
+                                        <i class="icofont-0x">&#xf000;</i>
+                                        <i class="icofont-0x">&#xf000;</i>
+                                        <p>(5.0)</p>
+                                    </div>
+                                    <div class="teacher">
+                                        <img src="/Labs/ISTA/HTML-EX/ex-01/img/author-1.jpg.webp" alt="">
+                                        <p>by Argaz_Dev</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="montant">
+                                <p>$100 All Course / $15 per month</p>
+                            </div>
+                            <div class="card-link">
+                                <a href="#">Entroll Now</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="course-card">
+                        <div class="card-desc">
+                            <div class="card-title">
+                                <i class="enginer icofont-3x">&#xe999;</i>
+                            <div class="title-desc">
+                                    <h2>Basic Fundamentals for Software Engineering</h2>
+                                    <div class="stars">
+                                        <i class="icofont-0x">&#xf000;</i>
+                                        <i class="icofont-0x">&#xf000;</i>
+                                        <i class="icofont-0x">&#xf000;</i>
+                                        <i class="icofont-0x">&#xf000;</i>
+                                        <i class="icofont-0x">&#xf000;</i>
+                                        <p>(5.0)</p>
+                                    </div>
+                                    <div class="teacher">
+                                        <img src="/Labs/ISTA/HTML-EX/ex-01/img/author-1.jpg.webp" alt="">
+                                        <p>by Argaz_Dev</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="montant">
+                                <p>$100 All Course / $15 per month</p>
+                            </div>
+                            <div class="card-link">
+                                <a href="#">Entroll Now</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="course-card">
+                        <div class="card-desc">
+                            <div class="card-title">
+                                <i class="enginer icofont-3x">&#xe999;</i>
+                            <div class="title-desc">
+                                    <h2>Basic Fundamentals for Software Engineering</h2>
+                                    <div class="stars">
+                                        <i class="icofont-0x">&#xf000;</i>
+                                        <i class="icofont-0x">&#xf000;</i>
+                                        <i class="icofont-0x">&#xf000;</i>
+                                        <i class="icofont-0x">&#xf000;</i>
+                                        <i class="icofont-0x">&#xf000;</i>
+                                        <p>(5.0)</p>
+                                    </div>
+                                    <div class="teacher">
+                                        <img src="/Labs/ISTA/HTML-EX/ex-01/img/author-1.jpg.webp" alt="">
+                                        <p>by Argaz_Dev</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="montant">
+                                <p>$100 All Course / $15 per month</p>
+                            </div>
+                            <div class="card-link">
+                                <a href="#">Entroll Now</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="course-card">
+                        <div class="card-desc">
+                            <div class="card-title">
+                                <i class="enginer icofont-3x">&#xe999;</i>
+                            <div class="title-desc">
+                                    <h2>Basic Fundamentals for Software Engineering</h2>
+                                    <div class="stars">
+                                        <i class="icofont-0x">&#xf000;</i>
+                                        <i class="icofont-0x">&#xf000;</i>
+                                        <i class="icofont-0x">&#xf000;</i>
+                                        <i class="icofont-0x">&#xf000;</i>
+                                        <i class="icofont-0x">&#xf000;</i>
+                                        <p>(5.0)</p>
+                                    </div>
+                                    <div class="teacher">
+                                        <img src="/Labs/ISTA/HTML-EX/ex-01/img/author-1.jpg.webp" alt="">
+                                        <p>by Argaz_Dev</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="montant">
+                                <p>$100 All Course / $15 per month</p>
+                            </div>
+                            <div class="card-link">
+                                <a href="#">Entroll Now</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="course-card">
+                        <div class="card-desc">
+                            <div class="card-title">
+                                <i class="enginer icofont-3x">&#xe999;</i>
+                            <div class="title-desc">
+                                    <h2>Basic Fundamentals for Software Engineering</h2>
+                                    <div class="stars">
+                                        <i class="icofont-0x">&#xf000;</i>
+                                        <i class="icofont-0x">&#xf000;</i>
+                                        <i class="icofont-0x">&#xf000;</i>
+                                        <i class="icofont-0x">&#xf000;</i>
+                                        <i class="icofont-0x">&#xf000;</i>
+                                        <p>(5.0)</p>
+                                    </div>
+                                    <div class="teacher">
+                                        <img src="/Labs/ISTA/HTML-EX/ex-01/img/author-1.jpg.webp" alt="">
+                                        <p>by Argaz_Dev</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="montant">
+                                <p>$100 All Course / $15 per month</p>
+                            </div>
+                            <div class="card-link">
+                                <a href="#">Entroll Now</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="course-card">
+                        <div class="card-desc">
+                            <div class="card-title">
+                                <i class="enginer icofont-3x">&#xe999;</i>
+                            <div class="title-desc">
+                                    <h2>Basic Fundamentals for Software Engineering</h2>
+                                    <div class="stars">
+                                        <i class="icofont-0x">&#xf000;</i>
+                                        <i class="icofont-0x">&#xf000;</i>
+                                        <i class="icofont-0x">&#xf000;</i>
+                                        <i class="icofont-0x">&#xf000;</i>
+                                        <i class="icofont-0x">&#xf000;</i>
+                                        <p>(5.0)</p>
+                                    </div>
+                                    <div class="teacher">
+                                        <img src="/Labs/ISTA/HTML-EX/ex-01/img/author-1.jpg.webp" alt="">
+                                        <p>by Argaz_Dev</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="montant">
+                                <p>$100 All Course / $15 per month</p>
+                            </div>
+                            <div class="card-link">
+                                <a href="#">Entroll Now</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="course-card">
+                        <div class="card-desc">
+                            <div class="card-title">
+                                <i class="enginer icofont-3x">&#xe999;</i>
+                            <div class="title-desc">
+                                    <h2>Basic Fundamentals for Software Engineering</h2>
+                                    <div class="stars">
+                                        <i class="icofont-0x">&#xf000;</i>
+                                        <i class="icofont-0x">&#xf000;</i>
+                                        <i class="icofont-0x">&#xf000;</i>
+                                        <i class="icofont-0x">&#xf000;</i>
+                                        <i class="icofont-0x">&#xf000;</i>
+                                        <p>(5.0)</p>
+                                    </div>
                                     <div class="teacher">
                                         <img src="/Labs/ISTA/HTML-EX/ex-01/img/author-1.jpg.webp" alt="">
                                         <p>by Argaz_Dev</p>
@@ -262,5 +509,10 @@
             </div>
         </section>
     </main>
+
+
+
+
+    <script src="/Labs/ISTA/HTML-EX/ex-01/course.js"></script>
 </body>
 </html>

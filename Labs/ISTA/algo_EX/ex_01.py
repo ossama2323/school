@@ -1,6 +1,5 @@
+print(True and False or True)
 
+print(2 < 3 and 4 > 5)
 
-x =5
-y=6
-u=0
-print(x<5 and y==6 or u==0)
+print((2+6 == 10) and (8/2 == 3))

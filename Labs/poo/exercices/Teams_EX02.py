@@ -134,6 +134,5 @@ client.ouvrir_compte(type_compte)
 client.afficher_comptes()
 
 type_compte = input("enter type de compte a ouvrir: ")
-
 client.fermer_compte(type_compte)
 client.afficher_comptes()

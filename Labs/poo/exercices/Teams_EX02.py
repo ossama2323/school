@@ -58,23 +58,27 @@ class Client:
     def ouvrir_compte(self,type_compte):
         self.type_compte = type_compte
         if type_compte == "checking":
-            self.comptes.append(CheckingAccount(Numero_compte,Solde))
+            compte = CheckingAccount(Numero_compte,Solde)
         elif type_compte == "savings":
-            self.comptes.append(SavingsAccount(Numero_compte,Solde))
+            compte = SavingsAccount(Numero_compte,Solde)
         else:
             print("type de compte non valide")
+            return None
+        self.comptes.append(compte)
+        print(f"Compte {type_compte}")
+        return compte
 
     def fermer_compte(self,type_compte):
-        self.type_compte = type_compte
-        if type_compte == "courant":
-            self.comptes.pop()
-        elif type_compte == "d'épargne":
-            self.comptes.pop()
-        else:
-            print("type de compte non valide")
+        type = CheckingAccount if type_compte == "checking" else SavingsAccount
+        for self.compte in self.comptes:
+            if isinstance(compte, type):
+                self.comptes.remove(compte)
+        print(f"Compte {type_compte} fermé avec succès")
+
 
     def afficher_comptes(self):
-            print(self.comptes)
+        for self.compte in self.comptes:
+            compte.afficher_solde()
 
 
 
@@ -86,15 +90,22 @@ class Banque():
 
     def ajouter_client(self,client):
         self.clients.append(client)
+        print(f"Client {client.nom} ajouté.")
 
-    def supprimer_client(self,client):
-        self.clients.remove(client)
+    def supprimer_client(self,client,client_id):
+        for self.client in self.clients:
+            if self.client.client_id == client_id:
+                self.clients.remove(client)
+        print(f"Client {client.nom} supprimé.")
 
-    def transferer_fonds(self,compte_emetteur, compte_destination, amount):
-        self.compte_emeteur = compte_emetteur
-        self.compte_destination = compte_destination
-        self.amount = amount
 
+    def transferer_fonds(self,compte_emetteur, compte_destination, montant):
+        if  compte_emetteur.solde > montant:
+            compte_emetteur.retrait(montant)
+            compte_destination.deposer(montant)
+            print("transfer effectué")
+        else:
+            print("Solde insuffisant pour effectuer la transfer")
 
 
 
@@ -122,17 +133,28 @@ print("---------------------- saving account ------------------------------")
 savingsAccount.appliquer_interet(solde)
 savingsAccount.afficher_solde()
 
+print("------------------------------------------------")
 
 
-client = Client(12,"ossama")
+
+client = Client(1,"ossama")
 
 Numero_compte = input("enter numero de compte")
 Solde = input("enter solde de compte")
 type_compte = input("enter type de compte a ouvrir: ")
 
-client.ouvrir_compte(type_compte)
+compte1 = client.ouvrir_compte(type_compte)
+compte2 = client.ouvrir_compte(type_compte)
+
 client.afficher_comptes()
 
-type_compte = input("enter type de compte a ouvrir: ")
-client.fermer_compte(type_compte)
-client.afficher_comptes()
+# type_compte = input("enter type de compte a fermer: ")
+# client.fermer_compte(type_compte)
+
+
+banque = Banque()
+
+banque.ajouter_client(client)
+
+
+banque.transferer_fonds(compte1, compte2, 300)

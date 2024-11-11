@@ -59,13 +59,14 @@ E = Entree(nom, cout, taille_portion)
 cuisine_type = input("entrer le type de la cuisine: ")
 P = Plat_Principal(nom, cout, cuisine_type)
 
-dessert = input("entrer le nom de dessert")
+dessert = input("entrer le nom de dessert: ")
 sans_sucre = input("entrer si vous voulez avec sucre: ")
 D = Dessert(dessert, cout, sans_sucre)
 
+
+
+
 list_object = [R, E, P, D]
-
-
 
 for repas in list_object:
     repas.preparer()

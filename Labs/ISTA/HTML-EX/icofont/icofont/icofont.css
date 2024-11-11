@@ -63,6 +63,21 @@ url("./fonts/icofont.woff") format("woff");
   content: "\e9d7";
 }
 
+.icofont-teacher:before
+{
+  content: "\eaf0";
+}
+
+.icofont-certificate:before
+{
+  content: "\ead6";
+}
+
+.icofont-education:before
+{
+  content: "\ead7";
+}
+
 [class^="icofont-"].icofont-duotone,
 	[class*=" icofont-"].icofont-duotone
 {

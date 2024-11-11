@@ -42,7 +42,12 @@
             display: flex;
             z-index: 2;
         }
+        .navbar-scroll{
+            background: rgba(0, 0, 0, 0.244);
+            transition: all ease .3s;
+        }
         .nav-logo{
+            margin-top: 3px;
             margin-left: 18px;
             display: flex;
             flex-direction: column;
@@ -50,7 +55,8 @@
         .nav-logo-title{
             font-size: 30px;
             font-weight: 800;
-
+            line-height: 1.1;
+            text-transform: uppercase;
         }
         .nav-logo-title:hover{
             color: #1eb2a6;
@@ -160,13 +166,13 @@
             margin-top: 20px;
         }
         .contact-desc .div-1{
-            margin-left: 80px;
+            margin-left: 40px;
         }
         .contact-desc .div-2{
-            margin-left: 80px;
+            margin-left: 40px;
         }
         .contact-desc .div-3{
-            margin-left: 80px;
+            margin-left: 40px;
         }
         .contact-desc div span{
             color: black;
@@ -226,13 +232,12 @@
 <body>
     <main>
         <header>
-            <nav class="navbar">
+            <nav class="navbar" id="navbar">
                 <div class="nav-logo">
                     <a href="#" class="nav-logo-title">
                         Academia 
                     </a>
                     <span>Online Education & Learning</span>
-                   
                 </div>
                 <ul class="nav-list">
                     <li><a href="/Labs/ISTA/HTML-EX/ex-01/index.html">Home</a></li>
@@ -254,7 +259,7 @@
                 </div>
             </div>
         </section>
-        <section class="contact">
+        <section class="contact" id="contact">
             <div class="contact-content">
                 <h3>Contact us</h3>
                 <p class="open-hours">We're open for any suggestion or just to have a chat</p>
@@ -297,6 +302,15 @@
 
 
 
-
+    <script>
+        window.onscroll = function(){
+            if(window.scrollY > document.getElementById('contact').offsetTop - 20){
+                document.getElementById('navbar').classList.add('navbar-scroll');
+            }
+            else{
+                document.getElementById('navbar').classList.remove('navbar-scroll');
+            }
+        }
+    </script>
 </body>
 </html>

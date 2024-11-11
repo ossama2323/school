@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-
+    <link rel="stylesheet" href="/Labs/ISTA/HTML-EX/icofont/icofont/icofont.min.css">
     <style>
         *,
         *::before,
@@ -48,7 +47,12 @@
             top: 0;
             display: flex;
         }
+        .navbar-scroll{
+            background: rgba(0, 0, 0, 0.244);
+            transition: all ease .3s;
+        }
         .nav-logo{
+            margin-top: 3px;
             margin-left: 18px;
             display: flex;
             flex-direction: column;
@@ -56,6 +60,8 @@
         .nav-logo-title{
             font-size: 30px;
             font-weight: 800;
+            line-height: 1.1;
+            text-transform: uppercase;
         }
         .nav-logo-title:hover{
             color: #1eb2a6;
@@ -121,17 +127,96 @@
             background-color: #ffffff;
         }
 
+
+
+        .about{
+            width: 100%;
+            margin-top: 50px;
+            background-color: #f8f8f8;
+        }
+        .about-content{
+            width: 90%;
+            height: 100%;
+            margin: auto;
+            display: flex;
+            flex-direction: row;
+            overflow: hidden;
+        }
+        .about-img{
+            width: 50%;
+            background-image: url(/Labs/ISTA/HTML-EX/ex-01/img/about.jpg.webp);
+            background-position: center;
+            background-size: cover;
+        }
+        .about-desc{
+            width: 50%;
+            height: 100%;
+            padding: 100px 50px;
+            display: flex;
+            flex-direction: column;
+        }
+        .about-desc .desc-titles{
+            line-height: 1.4;
+        }
+        .about-desc .desc-titles span{
+            color: #1eb2a6;
+            font-size: 16px;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+        .about-desc .desc-titles h2{
+            font-size: 46px;
+            font-weight: 500;
+            color: rgba(0, 0, 0, 0.8);
+        }
+        .about-courses{
+            margin-top: 25px;
+        }
+        .about-course{
+            display: flex;
+            flex-direction: row;
+            padding: 20px;
+            background-color: #fff;
+            margin-bottom: 20px;
+        }
+        .about-course:hover{
+            background-color: #1eb2a6;
+            color: #fff;
+        }
+        .about-course:hover .card-desc h2{
+            color: #fff;
+        }
+        .about-course:hover .card-desc p{
+            color: #fff;
+        }
+        .about-course:hover .card-icon{
+            color: #fff;
+        }
+        .card-icon{
+            color: #1eb2a6;
+            margin-right: 30px;
+        }
+        .card-desc h2{
+            color: rgba(0, 0, 0, 0.8);
+            margin-bottom: 10px;
+            font-size: 20px;
+            font-weight: 500;
+        }
+        .card-desc p{
+            color: #999999;
+            font-size: 16px;
+            line-height: 1.6;
+        }
     </style>
 </head>
 <body>
     <header>
-        <nav class="navbar">
+        <nav class="navbar" id="navbar">
             <div class="nav-logo">
                 <a href="#" class="nav-logo-title">
                     Academia 
                 </a>
                 <span>Online Education & Learning</span>
-               
             </div>
             <ul class="nav-list">
                 <li><a class="active" href="/Labs/ISTA/HTML-EX/ex-01/index.html">Home</a></li>
@@ -152,5 +237,67 @@
             </div>
         </div>
     </section>
+    <section class="about" id="about">
+        <div class="about-content">
+            <div class="about-img">
+
+            </div>
+            <div class="about-desc">
+                <div class="desc-titles">
+                    <span>
+                        Learn Anything
+                    </span>
+                    <h2>
+                        Benefits About Online Learning Expertise
+                    </h2>
+                </div>
+                <div class="about-courses">
+                    <div class="about-course">
+                        <div class="card-icon">
+                            <i class="education icofont-3x">&#xead7;</i>                        
+                        </div>
+                        <div class="card-desc">
+                            <h2>online courses</h2>
+                            <p>Far far away, behind the word mountains, far from the countries Vokalia and 
+                                Consonantia, there live the blind texts.</p>
+                        </div>
+                    </div>
+                    <div class="about-course">
+                        <div class="card-icon">
+                            <i class="education icofont-3x">&#xead6;</i>                        
+                        </div>
+                        <div class="card-desc">
+                            <h2>Earn A Certificates</h2>
+                            <p>Far far away, behind the word mountains, far from the countries Vokalia and 
+                                Consonantia, there live the blind texts.</p>
+                        </div>
+                    </div>
+                    <div class="about-course">
+                        <div class="card-icon">
+                            <i class="education icofont-3x">&#xeaf0;</i>                        
+                        </div>
+                        <div class="card-desc">
+                            <h2>Learn with Expert</h2>
+                            <p>Far far away, behind the word mountains, far from the countries Vokalia and 
+                                Consonantia, there live the blind texts.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <script>
+        window.onscroll = function(){
+            if(window.scrollY > document.getElementById('about').offsetTop - 20){
+                document.getElementById('navbar').classList.add('navbar-scroll');
+            }
+            else{
+                document.getElementById('navbar').classList.remove('navbar-scroll');
+            }
+        }
+    </script>
 </body>
 </html>

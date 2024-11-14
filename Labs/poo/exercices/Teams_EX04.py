@@ -6,9 +6,9 @@ class Membre:
     def calculer_frais_annuels(self):
         return self.frais_adhesion
     def limit_emprunt(self):
-        livres_empruntes = ["livre1", "livre2"]
+        livres_empruntes = ["livre1", "livre2", "livre2"]
         limite_livre = 3
-        if len(livres_empruntes) > limite_livre:
+        if len(livres_empruntes) >= limite_livre:
             return "Vous avez atteint la limite d'emprunt"
         else:
             return "Vous pouvez emprunter des livres"
@@ -35,13 +35,13 @@ class EnfantMembre(Membre):
     def calculer_frais_annuels(self):
         return super().calculer_frais_annuels() / 2
     def limit_emprunt(self):
-        livres_empruntes = ["livre1", "livre2","livre3", "livre4","livre5", "livre6"]
+        livres_empruntes = ["livre1", "livre2","livre3", "livre4"]
         limite_livre = 5
-        if self.age < 18 and len(livres_empruntes) > limite_livre:
+        if self.age <= 18 and len(livres_empruntes) > limite_livre:
             return "Vous avez atteint la limite d'emprunt"
         else:
             print("Autorisation parentale requise")
-            return "Vous êtes un enfant, vous pouvez emprunter just 5 livres"
+            return "Vous êtes un enfant, vous pouvez emprunter 5 livres"
 
 
 class SeniorMembre(Membre):
@@ -49,14 +49,14 @@ class SeniorMembre(Membre):
         super().__init__(nom, age, frais_adhesion)
         self.__pourcentage_rabais = pourcentage_rabais
     def calculer_frais_annuels(self):
-        return super().calculer_frais_annuels() - self.__pourcentage_rabais
+        return super().calculer_frais_annuels() - (self.__pourcentage_rabais * super().calculer_frais_annuels())
     def limit_emprunt(self):
         livres_empruntes = []
         limite_livre = 7
-        if len(livres_empruntes) > limite_livre:
+        if len(livres_empruntes) >= limite_livre:
             return "Vous avez atteint la limite d'emprunt"
         else:
-            return "Vous pouvez emprunter just 7 livres"
+            return "Vous pouvez emprunter 7 livres"
         
 
 

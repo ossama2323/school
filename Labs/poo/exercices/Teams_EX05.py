@@ -1,14 +1,12 @@
 class Film:
     def __init__(self, titre, realisateur, duree_minutes):
-        self._titre = titre
-        self._realisateur = realisateur
-        self._duree_minutes = duree_minutes
+        self.titre = titre
+        self.realisateur = realisateur
+        self.duree_minutes = duree_minutes
     def afficher(self):
-        print(f"le filme est {self._titre} et le realisateur est {self._realisateur} et la durée de filme est {self._duree_minutes}")
-f = Film("colombiana", "ossama", 120)
-f.afficher()
+        print(f"le filme est {self.titre} et le realisateur est {self.realisateur} et la durée de filme est {self.duree_minutes}")
 
-class salle():
+class Salle():
     def __init__(self, numero_salle, capacite, sieges = []):
         self.numero_salle = numero_salle
         self.capacite = capacite
@@ -45,21 +43,21 @@ class Siege():
 class Projection(Film):
     def __init__(self, titre, realisateur, duree_minutes, salle, heure):
         super().__init__(titre, realisateur, duree_minutes)
-        self._heure = heure
-        self._salle = salle
+        self.heure = heure
+        self.salle = salle
     def afficher_details(self):
-        super().afficher() + print(f" et le filme est projecter a la salle numero {self._salle} a {self._heure}", end=" ")
+        print(f"le filme est {self.titre} et le realisateur est {self.realisateur} et la durée de filme est {self.duree_minutes}  et le filme est projecter a la salle numero {self.salle} a {self.heure}", end=" ")
 
     def reserver_siege(self, numero_siege):
         self.numero_siege = numero_siege
-        s = salle(2, 50)
+        s = Salle(2, 50)
         if s.sieges[self.numero_siege].disponible == True:
             s.sieges[self.numero_siege].reserver()
         else:
             print(f"le siege {self.numero_siege} est deja reserver")
 
     def afficher_siege_reserver(self):
-        s = salle(2, 50)
+        s = Salle(2, 50)
         for m in s.sieges:
             if not m.disponible:
                 print(f"les siege reserver sont {m.numero_siege}")
@@ -84,31 +82,86 @@ class Client():
         self.projection = projection
         self.numero_siege = numero_siege
         self.prix = prix
-        b = Billet(44, p, 3, 320)
-        billet = Billet(b.id_billet, b.projection, b.siege, b.prix)
+        billet = Billet(len(self._billets) + 1, projection, projection._salle._sieges[numero_siege - 1], prix)
         self.billets.append(billet)
+        
+    def aficher_billets(self):
+        if not self.billets:
+            print("vous n'avez pas de billet")
+            return
+        print(f"les billets acheter par {self.nom} :")
+        for billet in self.billets:
+            print(billet)
 
 
-            
-sa = salle(2, 50)
-sa.afficher_salle()
-sa.generer_siege()
-sa.afficher_siege_disponibles()
-for s in sa.sieges:
-    print(s)
 
-p = Projection("colombiana", "ossama", 120, 2, 7)
-p.reserver_siege(2)
-p.reserver_siege(7)
-p.reserver_siege(4)
 
-for s in sa.sieges:
-    print(s)
+class cinema():
+    def __init__(self, films=[], salles=[], projection=[], clients=[]):
+        self.films = films
+        self.salles = salles
+        self.projection = projection
+        self.clients = clients
 
-p.afficher_siege_reserver()
+    def ajouter_film(self, film):
+        self.films.append(film)
 
-b = Billet(44, p, 3, 320)
-b.afficher_billet()
+    def ajouter_salle(self, salle):
+        self.salles.append(salle)
 
-c = Client("ossama", 21)
-c.acheter_billet(p, 4, 320)
+    def programmer_projection(self, projection):
+        self.projection.append(projection)
+
+    def enregistrer_client(self, client):
+        self.clients.append(client)
+
+    def afficher_projections(self):
+        for p in self.projection:
+            print(p)
+
+    def afficher_client(self):
+        for c in self.clients:
+            print(c)
+
+
+
+film1 = Film("fury", "HDO box", 270)
+film2 = Film("jocker", "netflex", 140)
+film3 = Film("1997", "egybest", 220)
+salle1 = Salle(1, 50)
+salle2 = Salle(2, 60)
+salle3 = Salle(3, 45)
+
+cinema.ajouter_film(film1)
+cinema.ajouter_film(film2)
+cinema.ajouter_film(film3)
+
+cinema.ajouter_salle(salle1)
+cinema.ajouter_salle(salle2)
+cinema.ajouter_salle(salle3)
+
+
+projection1 = Projection(film1.titre, film1.realisateur, film1.duree_minutes, 1, 16)
+projection2 = Projection(film2.titre, film2.realisateur, film2.duree_minutes, 3, 20)
+projection3 = Projection(film3.titre, film3.realisateur, film3.duree_minutes, 2, 23)
+
+
+cinema.programmer_projection(projection1)
+cinema.programmer_projection(projection2)
+cinema.programmer_projection(projection3)
+cinema.afficher_projections()
+
+Salle.generer_siege(salle1.numero_salle, salle1.capacite)
+Salle.generer_siege(salle2.numero_salle, salle2.capacite)
+Salle.generer_siege(salle3.numero_salle, salle3.capacite)
+
+
+client1 = Client("ossama", 1)
+client2 = Client("ilyas", 2)
+client3 = Client("ayoub", 3)
+
+cinema.enregistrer_client(client1.nom, client1.id_client)
+cinema.enregistrer_client(client2.nom, client2.id_client)
+cinema.enregistrer_client(client3.nom, client3.id_client)
+
+

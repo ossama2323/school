@@ -78,6 +78,26 @@ url("./fonts/icofont.woff") format("woff");
   content: "\ead7";
 }
 
+.icofont-graduate-alt:before
+{
+  content: "\eadb";
+}
+
+.icofont-calendar:before
+{
+  content: "\eecd";
+}
+
+.icofont-duotone.icofont-briefcase:before
+{
+  content: "\13ad3";
+}
+
+.icofont-duotone.icofont-briefcase:after
+{
+  content: "\13ad2";
+}
+
 [class^="icofont-"].icofont-duotone,
 	[class*=" icofont-"].icofont-duotone
 {

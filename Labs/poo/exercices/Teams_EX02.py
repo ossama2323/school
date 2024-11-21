@@ -24,7 +24,7 @@ class CheckingAccount(Compte):
     def retrait(self, montant):
         ftrans = montant * self.frais_transaction
         if solde > montant:
-            self.solde -= montant + ftrans
+            self.solde = self.solde - (montant + ftrans)
         else:
             print("vous ne pouvez pas car votre sold ne dépasse pas le montant")
             print("-----------------------------------------------------")
@@ -33,7 +33,7 @@ class CheckingAccount(Compte):
         print("votre solde avec les frais de transaction est : " + str(self.solde))
         print("-----------------------------------------------------")
     def __str__(self):
-        return f"checkingAccount(numero_compte={self.numero_compte}, solde={self.solde})"
+        return f"checkingAccount(numero_compte={self.numero_compte})"
 
 
     
@@ -100,7 +100,7 @@ class Banque():
 
 
     def transferer_fonds(self,compte_emetteur, compte_destination, montant):
-        if  compte_emetteur.solde > montant:
+        if  compte.solde > montant:
             compte_emetteur.retrait(montant)
             compte_destination.deposer(montant)
             print("transfer effectué")
@@ -112,6 +112,7 @@ class Banque():
 
 
 
+banque = Banque()
 
 
 compte = Compte(12, 18000)
@@ -137,24 +138,24 @@ print("------------------------------------------------")
 
 
 
-client = Client(1,"ossama")
+client1 = Client(1,"ossama")
+client2 = Client(2,"ayoub")
 
 Numero_compte = input("enter numero de compte")
-Solde = input("enter solde de compte")
+Solde = int(input("enter solde de compte"))
 type_compte = input("enter type de compte a ouvrir: ")
 
-compte1 = client.ouvrir_compte(type_compte)
-compte2 = client.ouvrir_compte(type_compte)
-
-client.afficher_comptes()
+compte1 = client1.ouvrir_compte(type_compte)
+compte2 = client2.ouvrir_compte(type_compte)
 
 # type_compte = input("enter type de compte a fermer: ")
 # client.fermer_compte(type_compte)
 
 
-banque = Banque()
 
-banque.ajouter_client(client)
-
-
+banque.ajouter_client(client1)
+banque.ajouter_client(client2)
 banque.transferer_fonds(compte1, compte2, 300)
+
+client1.afficher_comptes()
+client2.afficher_comptes()

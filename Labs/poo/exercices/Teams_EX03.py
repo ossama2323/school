@@ -23,6 +23,7 @@ class Plat_Principal(Repas):
     def __init__(self, _nom, _cout, cuisine_type):
         super().__init__(_nom, _cout)
         self._cuisine_type = cuisine_type
+        
     def preparer(self):
         print(f"cuisson du plat principal: {self._nom} dans le style {self._cuisine_type}")
     def calculer_prix(self):

@@ -5,6 +5,8 @@ class Film:
         self.duree_minutes = duree_minutes
     def afficher(self):
         print(f"le filme est {self.titre} et le realisateur est {self.realisateur} et la durée de filme est {self.duree_minutes}")
+    def __str__(self):
+        return f"le film: {self.titre} realisé par: {self.realisateur} de durée: {self.duree_minutes} minutes"
 
 class Salle():
     def __init__(self, numero_salle, capacite, sieges = []):
@@ -17,9 +19,10 @@ class Salle():
         for i in range(len(self.sieges), self.capacite):
             siege = Siege(i + 1)
             self.sieges.append(siege)
-
     def afficher_siege_disponibles(self):
             print(f"il y a {len(self.sieges)} siege disponibles")
+    def __str__(self):
+        return f"la salle numero: {self.numero_salle} de capacité: {self.capacite}"
 
 
 class Siege():
@@ -37,7 +40,7 @@ class Siege():
         self.disponible = True
     
     def __str__(self):
-        return f" {self.numero_siege} {self.disponible}"
+        return f"le siege numero: {self.numero_siege} est {self.disponible}"
 
 
 class Projection(Film):
@@ -61,7 +64,8 @@ class Projection(Film):
         for m in s.sieges:
             if not m.disponible:
                 print(f"les siege reserver sont {m.numero_siege}")
-
+    def __str__(self):
+        return f"le film {self.titre} realisé par {self.realisateur} de durée {self.duree_minutes} dans la salle {self.salle} a {self.heure} "
 
 class Billet():
     def __init__(self, id_billet, projection, siege, prix):
@@ -71,7 +75,8 @@ class Billet():
         self.prix = prix
     def afficher_billet(self):
         print(f"le billet numero {self.id_billet} est pour le filme {self.projection} et votre siege est {self.siege} et le prix de billet est {self.prix}")
-        
+    def __str__(self):
+        return f"{self.id_billet} {self.projection} {self.siege} {self.prix}"
 
 class Client():
     def __init__(self, nom, id_client, billets = []):
@@ -92,11 +97,13 @@ class Client():
         print(f"les billets acheter par {self.nom} :")
         for billet in self.billets:
             print(billet)
+    def __str__(self):
+        return f"le client: {self.nom} de l'ID: {self.id_client} et de billet: {self.billets}"
 
 
 
 
-class cinema():
+class Cinema():
     def __init__(self, films=[], salles=[], projection=[], clients=[]):
         self.films = films
         self.salles = salles
@@ -123,11 +130,12 @@ class cinema():
         for c in self.clients:
             print(c)
 
-
+cinema = Cinema()
 
 film1 = Film("fury", "HDO box", 270)
 film2 = Film("jocker", "netflex", 140)
 film3 = Film("1997", "egybest", 220)
+
 salle1 = Salle(1, 50)
 salle2 = Salle(2, 60)
 salle3 = Salle(3, 45)
@@ -151,17 +159,17 @@ cinema.programmer_projection(projection2)
 cinema.programmer_projection(projection3)
 cinema.afficher_projections()
 
-Salle.generer_siege(salle1.numero_salle, salle1.capacite)
-Salle.generer_siege(salle2.numero_salle, salle2.capacite)
-Salle.generer_siege(salle3.numero_salle, salle3.capacite)
+salle1.generer_siege()
+salle2.generer_siege()
+salle3.generer_siege()
 
 
 client1 = Client("ossama", 1)
 client2 = Client("ilyas", 2)
 client3 = Client("ayoub", 3)
 
-cinema.enregistrer_client(client1.nom, client1.id_client)
-cinema.enregistrer_client(client2.nom, client2.id_client)
-cinema.enregistrer_client(client3.nom, client3.id_client)
+cinema.enregistrer_client(client1)
+cinema.enregistrer_client(client2)
+cinema.enregistrer_client(client3)
 
 

@@ -16,5 +16,7 @@ class Etudiante:
 
 # objects
 etd1 = Etudiante("ahmed", 18, 14) 
+print(etd1.getNom())
+
 etd1.setNom("achiko")
 print(etd1.getNom())

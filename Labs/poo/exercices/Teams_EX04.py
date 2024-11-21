@@ -63,6 +63,7 @@ class SeniorMembre(Membre):
 
 Nom = input("enter your name: ")
 Age = int(input("enter your age: "))
+
 Frais_adhesion = 20
 Frais_supplementaire = 10
 pourcentage_rabais = 25 / 100

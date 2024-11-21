@@ -39,3 +39,16 @@ class Commandes():
 
         
         
+
+class met():
+     def __init__(self):
+        self.__incriment = 0
+     def add(self):
+        self.__incriment += 1
+     def get_add(self):
+         return self.__incriment
+
+m = met()
+m.add()
+m.add()
+print(m.get_add)

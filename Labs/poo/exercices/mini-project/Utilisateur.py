@@ -11,3 +11,7 @@ class Utilisateur(ABC):
     
     def modifier_mot_de_passe(self, nouveau_mot_de_passe):
         self._mot_de_passe = nouveau_mot_de_passe
+    
+    def __str__(self):
+        return f"le nom est {self._nom} et l'id est {self._id_utilisateur}"
+

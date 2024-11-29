@@ -98,6 +98,61 @@ url("./fonts/icofont.woff") format("woff");
   content: "\13ad2";
 }
 
+.icofont-architecture-alt:before
+{
+  content: "\e985";
+}
+
+.icofont-brainstorming:before
+{
+  content: "\ead3";
+}
+
+.icofont-web:before
+{
+  content: "\f028";
+}
+
+.icofont-code-not-allowed:before
+{
+  content: "\eee9";
+}
+
+.icofont-figma:before
+{
+  content: "\f02f";
+}
+
+.icofont-quote-left:before
+{
+  content: "\efcd";
+}
+
+.icofont-quote-right:before
+{
+  content: "\efce";
+}
+
+.icofont-duotone.icofont-quote-right:before
+{
+  content: "\13b9b";
+}
+
+.icofont-duotone.icofont-quote-right:after
+{
+  content: "\13b9a";
+}
+
+.icofont-duotone.icofont-quote-left:before
+{
+  content: "\13b99";
+}
+
+.icofont-duotone.icofont-quote-left:after
+{
+  content: "\13b98";
+}
+
 [class^="icofont-"].icofont-duotone,
 	[class*=" icofont-"].icofont-duotone
 {

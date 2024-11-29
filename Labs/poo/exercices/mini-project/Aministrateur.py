@@ -32,7 +32,9 @@ class Administrateur(Utilisateur):
                 return f"le nom d'utilisateur est {self._nom} de l'id {self._id_utilisateur}"
             else:
                 return "il y a aucun utilisateur"
-    def gerer_menus(self, action, article, article_menu = []):
+    def gerer_menus(self, action, article= None, article_menu = []):
+        self.action = action
+        self.article = article
         if action == "ajouter article":
             article_menu.append(article)
             print(f"l'article {article} a été ajouter avec succes")
@@ -45,10 +47,14 @@ class Administrateur(Utilisateur):
             else:
                 print("L'article n'existe pas")
         elif action == "modifier article":
-            if article in article_menu:
-                article =  input("Entrez le nouveau nom de l'article : ")
+            print("voici le menu des article: ")
+            for a in enumerate(article_menu):
+                print(a)
+            article_index = int(input("entrer l'index de l'element a modifier: "))
+            if article_menu[article_index] in article_menu:
+                article_menu[article_index] =  input("Entrez le nouveau nom de l'article : ")
                 print("l'article a été modifier avec succes et les article disponible sont : ")
-                for a in article_menu:
+                for a in enumerate(article_menu):
                     print(a)
             else:
                 print("L'article n'existe pas")
@@ -82,7 +88,7 @@ print("-------------------------------------------------------------------------
 
 utilisateur_1.gerer_menus("ajouter article", "couscous")
 utilisateur_1.gerer_menus("ajouter article", "flan")
-utilisateur_1.gerer_menus("ajouter article", "tacos")
+utilisateur_1.gerer_menus("ajouter article", "shawarma")
 
 print("-------------------------------------------------------------------------")
 # utilisateur_1.gerer_menus("supprimer article", "couscous")
@@ -92,8 +98,8 @@ print("-------------------------------------------------------------------------
 # utilisateur_3.gerer_menus("supprimer article", "couscous")
 
 print("-------------------------------------------------------------------------")
-utilisateur_1.gerer_menus("modifier article", "couscous")
+utilisateur_1.gerer_menus("modifier article")
 # print("-------------------------------------------------------------------------")
-utilisateur_2.gerer_menus("modifier article", "flan")
+# utilisateur_2.gerer_menus("modifier article")
 # print("-------------------------------------------------------------------------")
-utilisateur_3.gerer_menus("modifier article", "couscous")
+# utilisateur_3.gerer_menus("modifier article")

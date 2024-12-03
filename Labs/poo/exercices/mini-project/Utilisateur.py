@@ -7,7 +7,8 @@ class Utilisateur(ABC):
     
     @abstractmethod
     def afficher_info(self):
-        pass
+        print(f"Administrateur: {self._nom}, ID: {self._id_utilisateur}")
+
     
     def modifier_mot_de_passe(self, nouveau_mot_de_passe):
         self._mot_de_passe = nouveau_mot_de_passe

@@ -1,13 +1,22 @@
 from Utilisateur import Utilisateur
+from Serveur import Serveur
+from Commande import Commandes
 
 class ChefDeCuisine(Utilisateur):
     def afficher_info(self):
-        return f"Chef de Cuisine: {self._nom}, ID: {self._id_utilisateur}"
-
+        pass            
     def consulter_commandes(self):
-        # Logique pour afficher les commandes en cours
-        pass
-
+        print(f"les commandes en cours sont: ")
+        for commande in Serveur.commandes:
+            print(f"la commande {commande} est en cours")
+    
     def mettre_a_jour_statut_commande(self, commande, statut):
-        # Logique pour mettre à jour le statut d'une commande
-        pass
+        self.commande = commande
+        self.statut = statut
+        if commande in Serveur.commandes:
+            Commandes.statut = statut
+        else:
+            print("la commandes n'existe pas")
+
+c = ChefDeCuisine("achiko", 1, "ossama_argaz")
+c.consulter_commandes()

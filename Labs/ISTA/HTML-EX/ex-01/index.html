@@ -47,6 +47,7 @@
             position: fixed;
             top: 0;
             display: flex;
+            z-index: 10;
         }
         .navbar-scroll{
             background: rgba(0, 0, 0, 0.244);
@@ -94,10 +95,10 @@
            margin-top: 50px;
         }
         .content{
-            width: 450px;
+            width: 550px;
             display: flex;
             flex-direction: column;
-            padding-top: 180px;
+            padding-top: 150px;
             margin-left: 100px;
             font-size: 14px;
         }
@@ -582,6 +583,109 @@
             margin-top: 20px;
             line-height: 1.4;
         }
+
+
+
+        .blog{
+            width: 100%;
+            height: 150vh;
+            background-color: #f8f8f8;
+        }
+        .blog-container{
+            width: 90%;
+            height: 100%;
+            margin: auto;
+        }
+        .blog-header{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .blog-header span{
+            font-size: 16px;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: #1eb2a6;
+        }
+        .blog-header h2{
+            color: #000;
+            font-size: 46px;
+            font-weight: 600;
+            margin-top: 15px;   
+        }
+        .blog-cards{
+            width: 100%;
+            height: auto;
+            display: flex;
+            justify-content: space-between;
+            margin-top: 60px;
+        }
+        .blog-card{
+            width: 30%;
+            height: 100%;
+            border-radius: 3px;
+            background-color: #f8f8f8;
+            box-shadow: #0000004f 1px 1px 10px;
+        }
+        .card-img{
+            width: 100%;
+            height: auto;
+            position: relative;
+        }
+        .icon-info{
+            position: absolute;
+            left: 5px;
+            top: 5px;
+            cursor: pointer;
+            background-color: #ffffff;
+            color: #1eb2a6;
+            border-radius: 50%;
+        }
+        .card-img img{
+            width: 100%;
+            height: 100%;
+        }
+        .blog-card-desc{
+            margin: 15px;
+            padding: 5px;
+            padding-bottom: 20px;
+        }
+        .card-desc-info{
+            font-size: 13px;
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+        .admin-i i{
+            font-size: 13px;
+            color: #1eb2a6;
+        }
+        .admin-i span{
+            text-transform: uppercase;
+            font-weight: 700;
+            color: #999999;
+        }
+        .admin-i span .active{
+            color: #1eb2a6;
+        }
+        .blog-card-desc-title{
+            font-size: 24px;
+            line-height: 1.4;
+            color: #000;
+        }
+        .blog-card-desc-title:hover{
+            color: #1eb2a6;
+            transition: .3s all ease;
+        }
+        .blog-card-desc-text{
+            font-size: 16px;
+            color: #999999;
+            line-height: 1.8;
+            font-weight: 400;
+            margin-top: 15px;
+            margin-bottom: 20px;
+        }
     </style>
 </head>
 <body>
@@ -980,6 +1084,106 @@
                         <div class="card-comment">
                             <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts</p>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="blog">
+        <div class="blog-container">
+            <div class="blog-header">
+                <span>our blog</span>
+                <h2>Recent From Blog</h2>
+            </div>
+            <div class="blog-cards">
+                <div class="blog-card">
+                    <div class="card-img">
+                        <div class="icon-info">
+                            <i class="icofont-3x">&#x13b45;</i>
+                        </div>
+                        <a href="#">
+                            <img src="/Labs/ISTA/HTML-EX/ex-01/img/bg_2.jpg.webp" alt="">
+                        </a>
+                    </div>
+                    <div class="blog-card-desc">
+                        <div class="card-desc-info">
+                            <div class="admin-i">
+                                <i class="icofont-2x">&#xed05;</i>
+                                <span>Admin</span>
+                            </div>
+                            <div class="admin-i">
+                                <i class="icofont-2x">&#xeecd;</i>
+                                <span>Jan. 18, 2021</span>
+                            </div>
+                            <div class="admin-i">
+                                <i class="icofont-2x">&#xeff2;</i>
+                                <span><a class="active" href="#">3 Comments</a></span>
+                            </div>
+                        </div>
+                        <a class="blog-card-desc-title" href="#">Build your Dream Software & Engineering Career</a>
+                        <p class="blog-card-desc-text">
+                            A small river named Duden flows by their place and supplies it with the necessary regelialia.
+                        </p>
+                    </div>
+                </div>
+                <div class="blog-card">
+                    <div class="card-img">
+                        <div class="icon-info">
+                            <i class="icofont-3x">&#x13b45;</i>
+                        </div>
+                        <a href="#">
+                            <img src="/Labs/ISTA/HTML-EX/ex-01/img/image_2.jpg.webp" alt="">
+                        </a>
+                    </div>
+                    <div class="blog-card-desc">
+                        <div class="card-desc-info">
+                            <div class="admin-i">
+                                <i class="icofont-2x">&#xed05;</i>
+                                <span>Admin</span>
+                            </div>
+                            <div class="admin-i">
+                                <i class="icofont-2x">&#xeecd;</i>
+                                <span>Jan. 18, 2021</span>
+                            </div>
+                            <div class="admin-i">
+                                <i class="icofont-2x">&#xeff2;</i>
+                                <span><a class="active" href="#">3 Comments</a></span>
+                            </div>
+                        </div>
+                        <a class="blog-card-desc-title" href="#">Build your Dream Software & Engineering Career</a>
+                        <p class="blog-card-desc-text">
+                            A small river named Duden flows by their place and supplies it with the necessary regelialia.
+                        </p>
+                    </div>
+                </div>
+                <div class="blog-card">
+                    <div class="card-img">
+                        <div class="icon-info">
+                            <i class="icofont-3x">&#x13b45;</i>
+                        </div>
+                        <a href="#">
+                            <img src="/Labs/ISTA/HTML-EX/ex-01/img/image_3.jpg.webp" alt="">
+                        </a>
+                    </div>
+                    <div class="blog-card-desc">
+                        <div class="card-desc-info">
+                            <div class="admin-i">
+                                <i class="icofont-2x">&#xed05;</i>
+                                <span>Admin</span>
+                            </div>
+                            <div class="admin-i">
+                                <i class="icofont-2x">&#xeecd;</i>
+                                <span>Jan. 18, 2021</span>
+                            </div>
+                            <div class="admin-i">
+                                <i class="icofont-2x">&#xeff2;</i>
+                                <span><a class="active" href="#">3 Comments</a></span>
+                            </div>
+                        </div>
+                        <a class="blog-card-desc-title" href="#">Build your Dream Software & Engineering Career</a>
+                        <p class="blog-card-desc-text">
+                            A small river named Duden flows by their place and supplies it with the necessary regelialia.
+                        </p>
                     </div>
                 </div>
             </div>

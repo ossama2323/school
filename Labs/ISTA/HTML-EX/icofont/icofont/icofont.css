@@ -153,6 +153,86 @@ url("./fonts/icofont.woff") format("woff");
   content: "\13b98";
 }
 
+.icofont-long-arrow-left:before
+{
+  content: "\ea93";
+}
+
+.icofont-long-arrow-right:before
+{
+  content: "\ea94";
+}
+
+.icofont-arrow-right:before
+{
+  content: "\ea5d";
+}
+
+.icofont-arrow-up:before
+{
+  content: "\ea5e";
+}
+
+.icofont-long-arrow-up:before
+{
+  content: "\ea95";
+}
+
+.icofont-location-arrow:before
+{
+  content: "\ef78";
+}
+
+.icofont-arrow-left:before
+{
+  content: "\ea5c";
+}
+
+.icofont-duotone.icofont-arrow-first:before
+{
+  content: "\13abf";
+}
+
+.icofont-duotone.icofont-arrow-first:after
+{
+  content: "\13abe";
+}
+
+.icofont-duotone.icofont-arrow-last:before
+{
+  content: "\13ac1";
+}
+
+.icofont-duotone.icofont-arrow-last:after
+{
+  content: "\13ac0";
+}
+
+.icofont-instrument:before
+{
+  content: "\eae0";
+}
+
+.icofont-user:before
+{
+  content: "\ed05";
+}
+
+.icofont-speech-comments:before
+{
+  content: "\eff2";
+}
+
+.icofont-duotone.icofont-info-circle:before
+{
+  content: "\13b45";
+}
+
+.icofont-duotone.icofont-info-circle:after
+{
+  content: "\13b44";
+}
+
 [class^="icofont-"].icofont-duotone,
 	[class*=" icofont-"].icofont-duotone
 {

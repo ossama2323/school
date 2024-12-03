@@ -4,3 +4,4 @@ for i in list:
     if i == 20:
         list.remove(i)
 print(list)
+

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        section{
+            width: 100%;
+            height: 700px;
+            background-color: aquamarine;
+        }
+        .title-sec{
+            width: 100%;
+            height: auto;
+            background-color: #ffffff;
+            font-size: 26px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .project-cards{
+            width: 100%;
+            height: auto;
+            background-color: rgb(203, 123, 19);
+            display: flex;
+            justify-content: space-between;
+            flex-flow: row wrap;
+        }
+        .card{
+            width: 48%;
+            height: 445px;
+            position: relative;
+            background-image: url(/img/blog1.png.webp);
+            background-position: center;
+            background-size: cover;
+            border-radius: 40px;
+            background-color: blueviolet;
+            margin-top: 10px;
+            margin-left: 10px;
+        }
+        .card:hover{
+            cursor: pointer;
+            transform: scale(1.01);
+        }
+        .card-desc{
+            display: flex;
+            position: absolute;
+            bottom: 40px;
+            left: 20px;
+        }
+        .card-desc button{
+            width: 120px;
+            height: 45px;
+            border: none;
+            border-radius: 30px;
+            margin-left: 5px;
+            background-color: #222;
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+    <section class="title-sec">
+        <h1>
+            flex box exercice
+        </h1>
+    </section>
+    <section>
+        <div class="project-cards">
+            <div class="card">
+                <div class="card-desc">
+                    <button>hello World!</button>
+                    <button>Hi Everyone</button>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-desc">
+                    <button>hello World!</button>
+                    <button>Hi Everyone</button>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-desc">
+                    <button>hello World!</button>
+                    <button>Hi Everyone</button>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-desc">
+                    <button>hello World!</button>
+                    <button>Hi Everyone</button>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-desc">
+                    <button>hello World!</button>
+                    <button>Hi Everyone</button>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-desc">
+                    <button>hello World!</button>
+                    <button>Hi Everyone</button>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-desc">
+                    <button>hello World!</button>
+                    <button>Hi Everyone</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>

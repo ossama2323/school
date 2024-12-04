@@ -233,6 +233,176 @@ url("./fonts/icofont.woff") format("woff");
   content: "\13b44";
 }
 
+.icofont-instagram:before
+{
+  content: "\ed46";
+}
+
+.icofont-facebook:before
+{
+  content: "\ed37";
+}
+
+.icofont-twitter:before
+{
+  content: "\ed7a";
+}
+
+.icofont-search-map:before
+{
+  content: "\ed16";
+}
+
+.icofont-ui-map:before
+{
+  content: "\ec66";
+}
+
+.icofont-google-map:before
+{
+  content: "\ed42";
+}
+
+.icofont-map-pins:before
+{
+  content: "\ef8a";
+}
+
+.icofont-map:before
+{
+  content: "\ef8b";
+}
+
+.icofont-site-map:before
+{
+  content: "\efeb";
+}
+
+.icofont-duotone.icofont-phone:before
+{
+  content: "\13b7f";
+}
+
+.icofont-duotone.icofont-phone:after
+{
+  content: "\13b7e";
+}
+
+.icofont-phone:before
+{
+  content: "\efbb";
+}
+
+.icofont-phone-circle:before
+{
+  content: "\efba";
+}
+
+.icofont-scroll-double-down:before
+{
+  content: "\eaa6";
+}
+
+.icofont-scroll-double-left:before
+{
+  content: "\eaa7";
+}
+
+.icofont-scroll-double-right:before
+{
+  content: "\eaa8";
+}
+
+.icofont-scroll-double-up:before
+{
+  content: "\eaa9";
+}
+
+.icofont-scroll-down:before
+{
+  content: "\eaaa";
+}
+
+.icofont-scroll-left:before
+{
+  content: "\eaab";
+}
+
+.icofont-scroll-long-down:before
+{
+  content: "\eaac";
+}
+
+.icofont-scroll-long-left:before
+{
+  content: "\eaad";
+}
+
+.icofont-file-javascript:before
+{
+  content: "\eb19";
+}
+
+.icofont-scroll-up:before
+{
+  content: "\eab1";
+}
+
+.icofont-scroll-right:before
+{
+  content: "\eab0";
+}
+
+.icofont-scroll-long-up:before
+{
+  content: "\eaaf";
+}
+
+.icofont-scroll-long-right:before
+{
+  content: "\eaae";
+}
+
+.icofont-scroll-bubble-down:before
+{
+  content: "\eaa2";
+}
+
+.icofont-scroll-bubble-left:before
+{
+  content: "\eaa3";
+}
+
+.icofont-scroll-bubble-right:before
+{
+  content: "\eaa4";
+}
+
+.icofont-scroll-bubble-up:before
+{
+  content: "\eaa5";
+}
+
+.icofont-duotone.icofont-screwdriver:before
+{
+  content: "\13bab";
+}
+
+.icofont-duotone.icofont-screwdriver:after
+{
+  content: "\13baa";
+}
+
+.icofont-duotone.icofont-screen:before
+{
+  content: "\13ba9";
+}
+
+.icofont-duotone.icofont-screen:after
+{
+  content: "\13ba8";
+}
+
 [class^="icofont-"].icofont-duotone,
 	[class*=" icofont-"].icofont-duotone
 {

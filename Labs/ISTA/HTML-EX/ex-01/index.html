@@ -588,7 +588,8 @@
 
         .blog{
             width: 100%;
-            height: 150vh;
+            height: auto;
+            padding-bottom: 120px;
             background-color: #f8f8f8;
         }
         .blog-container{
@@ -685,6 +686,384 @@
             font-weight: 400;
             margin-top: 15px;
             margin-bottom: 20px;
+        }
+
+
+
+        .prices{
+            width: 100%;
+            height: auto;
+            background-color: #f8f8f8;
+            overflow: hidden;
+            padding-bottom: 100px;
+        }
+        .pricing-container{
+            width: 90%;
+            height: 100%;
+            margin: auto;
+        }
+        .pricing-title{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+        }
+        .pricing-title span{
+            font-size: 16px;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: #1eb2a6;
+        }
+        .pricing-title h2{
+            color: #000;
+            font-size: 46px;
+            font-weight: 600;
+            margin-top: 15px;   
+        }
+        .prices-cards{
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin-top: 50px;
+        }
+        .prices-card{
+            width: 24%;
+            background-color: #ffffff;
+            box-shadow: -5px 5px 20px rgba(0, 0, 0, 0.071);
+        }
+        .prices-card-desc{
+            text-align: center;
+            padding: 40px 30px;
+        }
+        .prices-card-desc h4{
+            color: #111111;
+            letter-spacing: 1px;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+        }
+        .prices-card-desc span{
+            font-size: 50px;
+            font-weight: 600;
+            color: #1eb2a6;
+        }
+        .prices-card-desc .span-doll{
+            font-size: 30px;
+            color: #999999;
+        }
+        .prices-card-desc p{
+            margin-top: 30px;
+            margin-bottom: 50px;
+            color: #999999;
+            line-height: 1.6;
+        }
+        .prices-card-desc .card-link{
+            padding: 20px 25px;
+            text-transform: uppercase;
+            color: #1eb2a6;
+            border: 1px solid #1eb2a6;
+            border-radius: 2px;
+            font-weight: 600;
+            font-size: 14px;
+        }
+        .prices-card-desc .card-link:hover{
+            background-color: #1eb2a6;
+            color: #ffffff;
+        }
+
+
+        .send-mail{
+            width: 100%;
+            height: 40vh;
+            background-color: #1eb2a6;
+        }
+        .send-mail-container{
+            width: 80%;
+            height: 100%;
+            margin: auto;
+        }
+        .send-mail-content{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .send-mail-desc{
+            width: 55%;
+            margin-right: 20px;
+        }
+        .send-mail-desc h2{
+            color: #fff;
+            font-size: 27px;
+            font-weight: 500;
+            letter-spacing: 1.5px;
+            line-height: 1.4;
+        }
+        .send-mail-desc p{
+            color: #ffffffcc;
+            font-size: 16px;
+            font-weight: 500;
+            margin-top: 15px;
+        }
+        .send-mail-input{
+            width: 42%;
+            margin-left: 20px;
+        }
+        .send-mail-input .input{
+            width: 400px;
+            height: 50px;
+            border-bottom: 0.5px solid #fff;
+            position: relative;
+        }
+        .send-mail-input input{
+            width: 90%;
+            height: 100%;
+            background: transparent;
+            color: white;
+            font-size: 16px;
+            border: none;
+            outline: none;
+        }
+        .send-mail-input input::placeholder{
+            color: #fff;
+            text-transform: capitalize;
+            font-size: 16px;
+        }
+        .input .input-icon{
+            position: absolute;
+            right: 0;
+            top: 18px;
+            font-size: 20px;
+        }
+
+
+
+        footer{
+            width: 100%;
+            height: auto;
+            background-color: #f8f8f8;
+        }
+        .footer-content{
+            width: 90%;
+            height: auto;
+            padding: 60px 0;
+            margin: auto;
+            display: flex;
+        }
+        .principal-desc{
+            width: 20%;
+            height: auto;
+            padding: 20px;
+        }
+        .principal-desc-title{
+            line-height: 0.9;
+            margin-bottom: 40px;
+        }
+        .principal-desc h2{
+            font-size: 30px;
+            font-weight: 700;
+            color: #000;
+            text-transform: uppercase;
+        }
+        .principal-desc span{
+            color: #1eb2a6;
+            font-size: 12px;
+            font-weight: 500;
+            text-transform: uppercase;
+        }
+        .principal-desc-text{
+            color: #999999;
+            line-height: 1.6;
+        }
+        .principal-desc ul{
+            display: flex;
+            margin-top: 35px;
+        }
+        .principal-desc ul li{
+            margin-right: 15px;
+        }
+        .principal-desc ul li a{
+            background-color: #1eb2a6;
+            padding: 10px;
+            border-radius: 50%;
+        }
+
+
+        .explore-desc{
+            width: 15%;
+            height: auto;
+            padding: 20px;
+        }
+        .explore-desc h2{
+            font-size: 18px;
+            font-weight: 500;
+            color: #000;
+            text-transform: capitalize;
+        }
+        .explore-desc ul{
+            margin-top: 40px;
+        }
+        .explore-desc li{
+            margin-top: 20px;
+        }
+        .explore-desc li i{
+            color: #1eb2a6;
+        }
+        .explore-desc li a{
+            color: #999999;
+        }
+        .explore-desc li a:hover{
+            color: #1eb2a6;
+            transition: all ease-in .3s;
+        }
+
+
+
+        .Quick-Links-desc{
+            width: auto;
+            height: auto;
+            padding: 20px;
+        }
+        .Quick-Links-desc h2{
+            font-size: 18px;
+            font-weight: 500;
+            color: #000;
+            text-transform: capitalize;
+        }
+        .Quick-Links-desc ul{
+            margin-top: 40px;
+        }
+        .Quick-Links-desc li{
+            margin-top: 20px;
+        }
+        .Quick-Links-desc li i{
+            color: #1eb2a6;
+        }
+        .Quick-Links-desc li a{
+            color: #999999;
+        }
+        .Quick-Links-desc li a:hover{
+            color: #1eb2a6;
+            transition: all ease-in .3s;
+        }
+
+        .recent-post-desc{
+            width: 25%;
+            height: auto;
+            padding: 20px;
+        }
+        .recent-post-desc h2{
+            font-size: 18px;
+            font-weight: 500;
+            color: #000;
+            text-transform: capitalize;
+        }
+        .recent-post-content{
+            width: 100%;
+            height: auto;
+        }
+        .recent-post{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: row;
+            margin-top: 20px;
+        }
+        .img-1{
+            width: 50px;
+            height: 50px;
+            background-image: url(/Labs/ISTA/HTML-EX/ex-01/img/image_1.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            border-radius: 3px;
+        }
+        .img-2{
+            width: 50px;
+            height: 50px;
+            background-image: url(/Labs/ISTA/HTML-EX/ex-01/img/image_2.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            border-radius: 3px;
+        }
+        .img-3{
+            width: 50px;
+            height: 50px;
+            background-image: url(/Labs/ISTA/HTML-EX/ex-01/img/image_4.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            border-radius: 3px;
+        }
+        .recent-post-date{
+            padding-bottom: 10px;
+        }
+        .recent-post-date span{
+            font-size: 12px;
+            color: #1eb2a6;
+        }
+        .recent-post-date .date{
+            padding-right: 10px;
+        }
+        .recent-post-perssone{
+            margin-left: 25px;
+            margin-top: 5px;
+        }
+        .recent-post-perssone a{
+            font-size: 16px;
+            color: #999999;
+            font-weight: 400;
+        }
+        .recent-post-perssone a:hover{
+            color: #1eb2a6;
+            transition: all ease-in .3s;
+        }
+
+
+        .question{
+            width: 26%;
+            height: auto;
+            padding: 20px;
+        }
+        .question h2{
+            font-size: 16px;
+            font-weight: 500;
+            color: #000;
+            text-transform: capitalize;
+        }
+        .question-info{
+            display: flex;
+            margin-top: 30px;
+        }
+        .question-info a{
+            display: flex;
+        }
+        .question-info i{
+            color: #1eb2a6;
+            font-size: 22px;
+        }
+        .question-info p{
+            color: #999999;
+            margin-left: 20px;
+        }
+        .copy-right{
+            width: 100%;
+            height: 120px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #e9e9e9;
+        }
+        .copy-right p{
+            font-size: 14px;
+            color: #999999;
+        }
+        .copy-right p a{
+            color: #1eb2a6;
         }
     </style>
 </head>
@@ -1189,9 +1568,211 @@
             </div>
         </div>
     </section>
-
-
-
+    <section class="prices">
+        <div class="pricing-container">
+            <div class="pricing-title">
+                <span>our pricing</span>
+                <h2>Pricing & Packages</h2>
+            </div>
+            <div class="prices-cards">
+                <div class="prices-card">
+                    <div class="prices-card-desc">
+                        <h4>Basic Plan</h4>
+                        <span class="span-all"><span class="span-doll">$</span> 49K</span>
+                        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                        <a class="card-link" href="#">Get Started</a>
+                    </div>
+                </div>
+                <div class="prices-card">
+                    <div class="prices-card-desc">
+                        <h4>Beginner Plan</h4>
+                        <span class="span-all"><span class="span-doll">$</span> 79K</span>
+                        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                        <a class="card-link" href="#">Get Started</a>
+                    </div>
+                </div>
+                <div class="prices-card">
+                    <div class="prices-card-desc">
+                        <h4>Premium  Plan</h4>
+                        <span class="span-all"><span class="span-doll">$</span> 109K</span>
+                        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                        <a class="card-link" href="#">Get Started</a>
+                    </div>
+                </div>
+                <div class="prices-card">
+                    <div class="prices-card-desc">
+                        <h4>ultimate Plan</h4>
+                        <span class="span-all"><span class="span-doll">$</span> 149K</span>
+                        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                        <a class="card-link" href="#">Get Started</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="send-mail">
+        <div class="send-mail-container">
+            <div class="send-mail-content">
+                <div class="send-mail-desc">
+                    <h2>Newsletter - Stay tune and get the latest update</h2>
+                    <p>Far far away, behind the word mountains</p>
+                </div>
+                <div class="send-mail-input">
+                    <div class="input">
+                        <input type="mail" placeholder="enter email Address">
+                        <i class="icofont-2x input-icon">&#xef78;</i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="footer-content">
+            <div class="principal-desc">
+                <div class="principal-desc-title">
+                    <h2>
+                        Academia
+                    </h2>
+                    <a href="index.html">
+                        <span>Online Education & Learning</span>
+                    </a>
+                </div>
+                <p class="principal-desc-text">
+                    A small river named Duden flows by their place and supplies it with the necessary regelialia.
+                </p>
+                <ul>
+                    <li>
+                        <a href="#">
+                            <i class="icofont-0x">&#xed7a;</i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="icofont-0x">&#xed37;</i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="icofont-0x">&#xed46;</i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="explore-desc">
+                <h2>
+                    explore
+                </h2>
+                <ul>
+                    <li>
+                        <i class="icofont-0x">&#xea94;</i>
+                        <a href="#">About Us</a>
+                    </li>
+                    <li>
+                        <i class="icofont-0x">&#xea94;</i>
+                        <a href="#">Services</a>
+                    </li>
+                    <li>
+                        <i class="icofont-0x">&#xea94;</i>
+                        <a href="#">Courses</a>
+                    </li>
+                    <li>
+                        <i class="icofont-0x">&#xea94;</i>
+                        <a href="#">Blog</a>
+                    </li>
+                    <li>
+                        <i class="icofont-0x">&#xea94;</i>
+                        <a href="#">Contact us</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="Quick-Links-desc">
+                <h2>
+                    Quick Links
+                </h2>
+                <ul>
+                    <li>
+                        <i class="icofont-0x">&#xea94;</i>
+                        <a href="#">Contact Us</a>
+                    </li>
+                    <li>
+                        <i class="icofont-0x">&#xea94;</i>
+                        <a href="#">Pricing</a>
+                    </li>
+                    <li>
+                        <i class="icofont-0x">&#xea94;</i>
+                        <a href="#">Terms & Conditions</a>
+                    </li>
+                    <li>
+                        <i class="icofont-0x">&#xea94;</i>
+                        <a href="#">Privacy</a>
+                    </li>
+                    <li>
+                        <i class="icofont-0x">&#xea94;</i>
+                        <a href="#">Feedbacks</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="recent-post-desc">
+                <h2>Recent Posts</h2>
+                <div class="recent-post-content">
+                    <div class="recent-post">
+                        <a class="img-1" href="#"></a>
+                        <div class="recent-post-perssone">
+                            <div class="recent-post-date">
+                                <span class="date"><i class="icofont-0x">&#xeecd;</i> Jan. 18, 2021</span>
+                                <span><i class="icofont-0x">&#xed05;</i> Admin</span>
+                            </div>
+                        <a href="#">Creativity and Inspiration</a>
+                        </div>
+                    </div>
+                    <div class="recent-post">
+                        <a class="img-2" href="#"></a>
+                        <div class="recent-post-perssone">
+                            <div class="recent-post-date">
+                                <span class="date"><i class="icofont-0x">&#xeecd;</i> Jan. 18, 2021</span>
+                                <span><i class="icofont-0x">&#xed05;</i> Admin</span>
+                            </div>
+                        <a href="#">Creativity and Inspiration</a>
+                        </div>
+                    </div>
+                    <div class="recent-post">
+                        <a class="img-3" href="#"></a>
+                        <div class="recent-post-perssone">
+                            <div class="recent-post-date">
+                                <span class="date"><i class="icofont-0x">&#xeecd;</i> Jan. 18, 2021</span>
+                                <span><i class="icofont-0x">&#xed05;</i> Admin</span>
+                            </div>
+                        <a href="#">Creativity and Inspiration</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="question">
+                <h2>Have a Questions?</h2>
+                <div class="question-content">
+                    <div class="question-info question-address">
+                        <i class="icofont-0x">&#xed16;</i>
+                        <p>	203 Fake St. Mountain View, San Francisco, California, USA</p>
+                    </div>
+                    <div class="question-info question-telephone">
+                        <a href="#">
+                            <i class="icofont-0x">&#xefbb;</i>
+                            <p>+212 681 872 061</p> 
+                        </a>
+                    </div>
+                    <div class="question-info question-mail">
+                        <a href="#">
+                            <i class="icofont-0x">&#xef78;</i>
+                            <p>ossamaargaz@gmail.com</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copy-right">
+            <p>Copyright ©2024 All rights reserved | This template is made with by <a href="#">Argaz_dev</a></p>
+        </div>
+    </footer>
 
 
 

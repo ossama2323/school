@@ -1,0 +1,3 @@
+
+ la methode <w> suprimer le contenu de fichier et mettre à jour son contenu, et s'il nexiste pas il le creer a nouveau ,
+ et la methode <a> fait la meme chose si le fichier n 'existe pas

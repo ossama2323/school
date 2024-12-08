@@ -5,6 +5,5 @@ x, crée un nouveau fichier et l'ouvre pour écriture
 
 b, pour une ouverture en mode binaire.
 t, pour une ouverture en mode texte.
- c'est le text ajouter avec la methode <a>
- c'est le text ajouter avec la methode <a>
- c'est le text ajouter avec la methode <a>
+c'est le text ajouter avec la methode <a>
+ test de gestion fichier dans le mini projet

@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
     <link rel="stylesheet" href="/Labs/ISTA/HTML-EX/icofont/icofont/icofont.min.css">
+    <link rel="stylesheet" href="/Labs/ISTA/HTML-EX/OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="/Labs/ISTA/HTML-EX/OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css">
+    <title>Home</title>
     <style>
         *,
         *::before,
@@ -39,6 +41,72 @@
             background-size: 100% 100%;
             color: #ffffff;
         }
+        .preloader{
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: darkturquoise;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 20;
+        }
+        .spinner {
+            margin: 100px auto;
+            width: 50px;
+            height: 40px;
+            text-align: center;
+            font-size: 10px;
+        }
+        
+        .spinner > div {
+            background-color: #333;
+            height: 100%;
+            width: 6px;
+            display: inline-block;
+            
+            -webkit-animation: sk-stretchdelay 1.2s infinite ease-in-out;
+            animation: sk-stretchdelay 1.2s infinite ease-in-out;
+        }
+        
+        .spinner .rect2 {
+            -webkit-animation-delay: -1.1s;
+            animation-delay: -1.1s;
+        }
+        
+        .spinner .rect3 {
+            -webkit-animation-delay: -1.0s;
+            animation-delay: -1.0s;
+        }
+        
+        .spinner .rect4 {
+            -webkit-animation-delay: -0.9s;
+            animation-delay: -0.9s;
+        }
+        
+        .spinner .rect5 {
+            -webkit-animation-delay: -0.8s;
+            animation-delay: -0.8s;
+        }
+        
+        @-webkit-keyframes sk-stretchdelay {
+            0%, 40%, 100% { -webkit-transform: scaleY(0.4) }  
+            20% { -webkit-transform: scaleY(1.0) }
+        }
+        
+        @keyframes sk-stretchdelay {
+            0%, 40%, 100% { 
+            transform: scaleY(0.4);
+            -webkit-transform: scaleY(0.4);
+            }  20% { 
+            transform: scaleY(1.0);
+            -webkit-transform: scaleY(1.0);
+            }
+        }
+
+
         .navbar{
             width: 100%;
             height: 60px;
@@ -148,7 +216,7 @@
         }
         .about-img{
             width: 50%;
-            background-image: url(/Labs/ISTA/HTML-EX/ex-01/img/about.jpg.webp);
+            background-image: url(./img/about.jpg.webp);
             background-position: center;
             background-size: cover;
         }
@@ -216,7 +284,7 @@
         .icon-counter{
             width: 100%;
             height: 50vh;
-            background-image: url(/Labs/ISTA/HTML-EX/ex-01/img/bg_3.jpg.webp);
+            background-image: url(./img/bg_3.jpg.webp);
             background-position: center;
             background-size: cover;
         }
@@ -306,7 +374,7 @@
             justify-content: space-around;
         }
         .course-card{
-            width: 32%;
+            width: 95%;
             height: auto;
             padding-top: 20px;
             color: #000;
@@ -318,6 +386,11 @@
             width: 90%;
             height: 100%;
             margin: auto;
+            margin-bottom: 15px;
+            padding-bottom: 1px;
+        }
+        .owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
+            background: #1eb2a6;
         }
         .card-title{
             width: 100%;
@@ -404,6 +477,7 @@
             background-color: #1eb2a6;
             transition: all ease .2s;
         }
+
 
 
 
@@ -542,16 +616,16 @@
             width: 80px;
             height: 80px;
             border-radius: 50%;
-            background-image: url(/Labs/ISTA/HTML-EX/ex-01/img/person_1.jpg.webp);
+            background-image: url(./img/person_1.jpg.webp);
             background-position: center;
             background-size: cover;
             position: relative;
         }
         .perssone-2{
-            background-image: url(/Labs/ISTA/HTML-EX/ex-01/img/person_2.jpg.webp);
+            background-image: url(./img/person_2.jpg.webp);
         }
         .perssone-3{
-            background-image: url(/Labs/ISTA/HTML-EX/ex-01/img/person_3.jpg.webp);
+            background-image: url(./img/person_3.jpg.webp);
         }
         .perssone-image span{
             font-size: 5px;
@@ -977,7 +1051,7 @@
         .img-1{
             width: 50px;
             height: 50px;
-            background-image: url(/Labs/ISTA/HTML-EX/ex-01/img/image_1.jpg);
+            background-image: url(./img/image_1.jpg);
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center center;
@@ -986,7 +1060,7 @@
         .img-2{
             width: 50px;
             height: 50px;
-            background-image: url(/Labs/ISTA/HTML-EX/ex-01/img/image_2.jpg);
+            background-image: url(./img/image_2.jpg);
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center center;
@@ -995,7 +1069,7 @@
         .img-3{
             width: 50px;
             height: 50px;
-            background-image: url(/Labs/ISTA/HTML-EX/ex-01/img/image_4.jpg);
+            background-image: url(./img/image_4.jpg);
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center center;
@@ -1070,6 +1144,15 @@
     </style>
 </head>
 <body>
+    <div class="preloader">
+        <div class="spinner">
+            <div class="rect1"></div>
+            <div class="rect2"></div>
+            <div class="rect3"></div>
+            <div class="rect4"></div>
+            <div class="rect5"></div>
+          </div>    
+    </div>
     <header>
         <nav class="navbar" id="navbar">
             <div class="nav-logo">
@@ -1155,7 +1238,7 @@
                     </div>
                     <div class="icon-desc">
                         <h2>
-                            <span>3,000</span>
+                            <span class="timer" data-from="0" data-to="3000">3,000</span>
                         </h2>
                         <span class="icon-span">Success Stories</span>
                     </div>
@@ -1166,7 +1249,7 @@
                     </div>
                     <div class="icon-desc">
                         <h2>
-                            <span>320</span>
+                            <span class="timer" data-from="0" data-to="320">320</span>
                         </h2>
                         <span class="icon-span">Trusted Tutors</span>
                     </div>
@@ -1177,7 +1260,7 @@
                     </div>
                     <div class="icon-desc">
                         <h2>
-                            <span>1,000</span>
+                            <span class="timer" data-from="0" data-to="1000">1,000</span>
                         </h2>
                         <span class="icon-span">Schedules</span>
                     </div>
@@ -1188,7 +1271,7 @@
                     </div>
                     <div class="icon-desc">
                         <h2>
-                            <span>587</span>
+                            <span class="timer" data-from="0" data-to="587">587</span>
                         </h2>
                         <span class="icon-span">Courses</span>
                     </div>
@@ -1203,8 +1286,8 @@
                     <span>Our Courses</span>
                     <h2>Explore Our Popular Online Courses</h2>
                 </div>
-                <div class="card-slider">
-                    <div class="course-card">
+                <div class="card-slider owl-carousel owl-theme">
+                    <div class="course-card item">
                         <div class="card-desc">
                             <div class="card-title">
                                 <i class="enginer icofont-3x">&#xe999;</i>
@@ -1232,7 +1315,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="course-card">
+                    <div class="course-card item">
                         <div class="card-desc">
                             <div class="card-title">
                                 <i class="enginer icofont-3x">&#xe999;</i>
@@ -1260,7 +1343,91 @@
                             </div>
                         </div>
                     </div>
-                    <div class="course-card">
+                    <div class="course-card item">
+                        <div class="card-desc">
+                            <div class="card-title">
+                                <i class="enginer icofont-3x">&#xe999;</i>
+                            <div class="title-desc">
+                                    <h2>Basic Fundamentals for Software Engineering</h2>
+                                    <div class="stars">
+                                        <i class="icofont-0x">&#xf000;</i>
+                                        <i class="icofont-0x">&#xf000;</i>
+                                        <i class="icofont-0x">&#xf000;</i>
+                                        <i class="icofont-0x">&#xf000;</i>
+                                        <i class="icofont-0x">&#xf000;</i>
+                                        <p>(5.0)</p>
+                                    </div>
+                                    <div class="teacher">
+                                        <img src="/Labs/ISTA/HTML-EX/ex-01/img/author-1.jpg.webp" alt="">
+                                        <p>by Argaz_Dev</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="montant">
+                                <p>$100 All Course / $15 per month</p>
+                            </div>
+                            <div class="card-link">
+                                <a href="#">Entroll Now</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="course-card item">
+                        <div class="card-desc">
+                            <div class="card-title">
+                                <i class="enginer icofont-3x">&#xe999;</i>
+                            <div class="title-desc">
+                                    <h2>Basic Fundamentals for Software Engineering</h2>
+                                    <div class="stars">
+                                        <i class="icofont-0x">&#xf000;</i>
+                                        <i class="icofont-0x">&#xf000;</i>
+                                        <i class="icofont-0x">&#xf000;</i>
+                                        <i class="icofont-0x">&#xf000;</i>
+                                        <i class="icofont-0x">&#xf000;</i>
+                                        <p>(5.0)</p>
+                                    </div>
+                                    <div class="teacher">
+                                        <img src="/Labs/ISTA/HTML-EX/ex-01/img/author-1.jpg.webp" alt="">
+                                        <p>by Argaz_Dev</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="montant">
+                                <p>$100 All Course / $15 per month</p>
+                            </div>
+                            <div class="card-link">
+                                <a href="#">Entroll Now</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="course-card item">
+                        <div class="card-desc">
+                            <div class="card-title">
+                                <i class="enginer icofont-3x">&#xe999;</i>
+                            <div class="title-desc">
+                                    <h2>Basic Fundamentals for Software Engineering</h2>
+                                    <div class="stars">
+                                        <i class="icofont-0x">&#xf000;</i>
+                                        <i class="icofont-0x">&#xf000;</i>
+                                        <i class="icofont-0x">&#xf000;</i>
+                                        <i class="icofont-0x">&#xf000;</i>
+                                        <i class="icofont-0x">&#xf000;</i>
+                                        <p>(5.0)</p>
+                                    </div>
+                                    <div class="teacher">
+                                        <img src="/Labs/ISTA/HTML-EX/ex-01/img/author-1.jpg.webp" alt="">
+                                        <p>by Argaz_Dev</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="montant">
+                                <p>$100 All Course / $15 per month</p>
+                            </div>
+                            <div class="card-link">
+                                <a href="#">Entroll Now</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="course-card item">
                         <div class="card-desc">
                             <div class="card-title">
                                 <i class="enginer icofont-3x">&#xe999;</i>
@@ -1780,8 +1947,9 @@
 
 
     <script src="/js/Jquery.js"></script>
+    <script src="/Labs/ISTA/HTML-EX/OwlCarousel2-2.3.4/docs_src/assets/vendors/jquery.min.js"></script>
     <script src="/bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
-    <script src="/jquery/script.js"></script>
+
     <script>
         window.onscroll = function(){
             if(window.scrollY > document.getElementById('about').offsetTop - 20){
@@ -1791,6 +1959,28 @@
                 document.getElementById('navbar').classList.remove('navbar-scroll');
             }
         }
+    </script>
+    <script>
+        $(document).ready(function(){
+            $(".preloader").delay(1000).fadeOut('slow');
+        });
+    </script>
+
+    <script src="/Labs/ISTA/HTML-EX/OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
+    <script>
+        $(document).ready(function (){
+            $('.owl-carousel').owlCarousel({
+                autoplay: true
+            });
+        });
+    </script>
+
+    <script src="/Labs/ISTA/HTML-EX/js/jquery.countTo.js"></script>
+    <script type="text/javascript">
+        $('.timer').countTo({
+            speed: 1500,
+            refreshInterval: 15,
+        });
     </script>
 </body>
 </html>

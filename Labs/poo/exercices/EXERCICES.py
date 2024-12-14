@@ -64,7 +64,7 @@ class DateNaissance:
         return str(self.jour) + "/"+str(self.mois) + "/" + str(self.année)
     
 class Perssone:
-    def __init__(self,nom,prenom,naissance):
+    def __init__(self, nom, prenom, naissance):
         self.nom = nom
         self.prenom = prenom
         self.naissance = naissance

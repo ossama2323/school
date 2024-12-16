@@ -3,6 +3,7 @@ class Table():
         self._numero_table = numero_table
         self._capacite = capacite
         self._est_occupe = "libre"
+        
     def afficher_info_table(self):
         print(f"La table numero {self._numero_table}, la capacite de la table est {self._capacite}")
     

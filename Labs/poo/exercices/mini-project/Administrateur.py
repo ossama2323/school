@@ -2,7 +2,7 @@ from Utilisateur import Utilisateur
 
 class Administrateur(Utilisateur):
     def afficher_info(self):
-        pass
+        print(f"Administrateur: {self._nom}, ID: {self._id_utilisateur}")
     
     def gerer_utilisateur(self, action, utilisateur, utilisateurs = []):
         self.action = action

@@ -6,5 +6,10 @@ class Reservation():
         self._date = date
         self._heure = heure
         self._table = table
+
     def afficher_reservation(self):
-        print(f"Reservation de L'id {self._id_reservation}, par {self._nom}, a {self._date}, a l'heure {self._heure}, nombre de perssone {self._nombre_perssones}, au table {self._table}")
+        print(f"Reservation de L'id {self._id_reservation}, par {self._nom_client}, a {self._date}, a l'heure {self._heure}, nombre de perssone {self._nombre_perssones}, au table {self._table}")
+
+    def __str__(self):
+        return f"Reservation de L'id {self._id_reservation}, par {self._nom_client}, a {self._date}, a l'heure {self._heure}, nombre de perssone {self._nombre_perssones}, au table {self._table}"
+    

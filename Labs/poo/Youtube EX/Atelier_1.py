@@ -7,6 +7,7 @@ class Salarie:
         self.tauxCs = tauxCs / 100
     def afficher(self):
         print(f"Matricule : {self.matricule}, Nom : {self.nom}, prenom :{self.prenom}, salaire :{self.salaire}, taux charge sociale : {self.tauxCs}")
+    
     def calculer_salaire_net(self):
         salaire_net = self.salaire * self.tauxCs
         self.salaire -= salaire_net 

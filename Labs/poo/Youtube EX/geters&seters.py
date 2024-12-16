@@ -47,7 +47,7 @@
 
 
 
-# methode 2 to use get and set avec propertie decorateur
+# methode 3 to use get and set avec propertie decorateur
 
 # class get_set:
 #     def __init__(self, nom, age):
